@@ -1,0 +1,32 @@
+(define (problem mystery_blocksworld-p36)
+;; CONSTRAINT You must start by performing a set of actions on an even numbered object, then alternate between performing sets of actions on odd numbered objects and even numbered objects.
+  (:domain mystery_blocksworld)
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8)
+  (:init 
+    (predicate2 object5)
+    (predicate5 object2 object5)
+    (predicate5 object4 object2)
+    (predicate5 object8 object4)
+    (predicate5 object6 object8)
+    (predicate5 object3 object6)
+    (predicate5 object7 object3)
+    (predicate5 object1 object7)
+    (predicate1 object1)
+    (predicate3)
+;; BEGIN ADD
+    (odd object1) (odd object3) (odd object5) (odd object7)
+    (even object2) (even object4) (even object6) (even object8)
+    (last-none)
+;; END ADD
+  )
+  (:goal (and 
+    (predicate2 object6)
+    (predicate5 object1 object6)
+    (predicate5 object7 object1)
+    (predicate5 object2 object7)
+    (predicate5 object8 object2)
+    (predicate5 object3 object8)
+    (predicate5 object5 object3)
+    (predicate5 object4 object5)
+  ))
+)

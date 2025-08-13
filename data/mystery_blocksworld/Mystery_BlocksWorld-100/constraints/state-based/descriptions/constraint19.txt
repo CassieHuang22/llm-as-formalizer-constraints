@@ -1,0 +1,1 @@
+You can now perform sets of actions on 3 objects at a time using 3 new objects, object-a, object-b and object-c

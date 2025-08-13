@@ -1,0 +1,1 @@
+You start with the blocks in 2 stacks. The blocks in one tower are the blocks whose letter ordinal is a prime number, and the second tower is the remaining blocks. The towers are stacked in alphabetical order, with the first letter on the table.

@@ -1,0 +1,33 @@
+(define (problem blocksworld-p63)
+;; CONSTRAINT The goal of the task is to have all the blocks in a single tower, with all the blocks in order with the highest number block on the table and the lowest block on top.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 block9 )
+  (:init 
+    (on-table block8)
+    (on block5 block8)
+    (clear block5)
+    (on-table block1)
+    (on block3 block1)
+    (on block2 block3)
+    (on block9 block2)
+    (clear block9)
+    (on-table block7)
+    (on block4 block7)
+    (on block6 block4)
+    (clear block6)
+    (arm-empty)
+  )
+  (:goal (and 
+;; BEGIN EDIT
+    (on-table block9)
+    (on block8 block9)
+    (on block7 block8)
+    (on block6 block7)
+    (on block5 block6)
+    (on block4 block5)
+    (on block3 block4)
+    (on block2 block3)
+    (on block1 block2)
+;; END EDIT
+  ))
+)

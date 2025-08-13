@@ -1,0 +1,46 @@
+(define (problem mystery_blocksworld-p07)
+;; CONSTRAINT Once you start performing actions on the objects, you must have exactly 10 clusters at any time
+  (:domain mystery_blocksworld)
+;; BEGIN EDIT
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8 object9 object10 - object
+  s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 - cluster)
+;; END EDIT
+  (:init 
+    (predicate2 object8)
+    (predicate5 object4 object8)
+    (predicate5 object1 object4)
+    (predicate5 object2 object1)
+    (predicate1 object2)
+    (predicate2 object9)
+    (predicate1 object9)
+    (predicate2 object3)
+    (predicate5 object6 object3)
+    (predicate1 object6)
+    (predicate2 object7)
+    (predicate1 object7)
+    (predicate2 object5)
+    (predicate5 object10 object5)
+    (predicate1 object10)
+    (predicate3)
+;; BEGIN ADD
+    (assigned object8 s1) (used s1)
+    (assigned object9 s2) (used s2)
+    (assigned object3 s3) (used s3)
+    (assigned object7 s4) (used s4)
+    (assigned object5 s5) (used s5)
+    (assigned object10 s6) (used s6)
+;; END ADD
+  )
+  (:goal (and 
+    (predicate2 object5)
+    (predicate2 object2)
+    (predicate2 object10)
+    (predicate2 object3)
+    (predicate2 object8)
+    (predicate2 object4)
+    (predicate2 object6)
+    (predicate2 object7)
+    (predicate2 object1)
+    (predicate2 object9)
+  ))
+)

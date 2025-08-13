@@ -1,0 +1,20 @@
+{"problem": "p01", "constraint": "constraint1", "constraint_description": "The higher number the block, the heavier it is. Do not stack heavier blocks on lighter blocks.", "plan_exists": true}
+{"problem": "p02", "constraint": "constraint2", "constraint_description": "The higher number the block, the heavier it is. Do not stack lighter blocks on heavier blocks.", "plan_exists": false}
+{"problem": "p03", "constraint": "constraint3", "constraint_description": "No stack should be more than 2 blocks high.", "plan_exists": false}
+{"problem": "p04", "constraint": "constraint4", "constraint_description": "No stack should be more than 3 blocks high.", "plan_exists": true}
+{"problem": "p05", "constraint": "constraint5", "constraint_description": "No stack should be more than 4 blocks high.", "plan_exists": false}
+{"problem": "p06", "constraint": "constraint6", "constraint_description": "No stack should be more than 5 blocks high.", "plan_exists": true}
+{"problem": "p07", "constraint": "constraint7", "constraint_description": "At any time, you must have exactly 10 stacks.", "plan_exists": false}
+{"problem": "p08", "constraint": "constraint8", "constraint_description": "Only 15 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p09", "constraint": "constraint9", "constraint_description": "The weight of each block is its number. The total weight above a block should not exceed the weight of the block itself.", "plan_exists": false}
+{"problem": "p10", "constraint": "constraint10", "constraint_description": "Only 20 pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p11", "constraint": "constraint11", "constraint_description": "At any time, you must have exactly 6 stacks.", "plan_exists": false}
+{"problem": "p12", "constraint": "constraint12", "constraint_description": "You must have no more than 1 stacks at any time.", "plan_exists": false}
+{"problem": "p13", "constraint": "constraint13", "constraint_description": "You must have no more than 2 stacks at any time.", "plan_exists": false}
+{"problem": "p14", "constraint": "constraint14", "constraint_description": "You must have no more than 3 stacks at any time.", "plan_exists": false}
+{"problem": "p15", "constraint": "constraint15", "constraint_description": "Only 5 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p16", "constraint": "constraint16", "constraint_description": "Only 10 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p17", "constraint": "constraint17", "constraint_description": "At any time, you must have exactly 3 stacks.", "plan_exists": false}
+{"problem": "p18", "constraint": "constraint18", "constraint_description": "At any time, you must have exactly 4 stacks.", "plan_exists": false}
+{"problem": "p19", "constraint": "constraint19", "constraint_description": "At any time, you must have exactly 5 stacks.", "plan_exists": false}
+{"problem": "p20", "constraint": "constraint20", "constraint_description": "The sum of the block numbers in each stack should not exceed 5.", "plan_exists": false}

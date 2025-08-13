@@ -1,0 +1,30 @@
+(define (problem mystery_blocksworld-p92)
+;; CONSTRAINT You start with the objects in 2 clusters. The objects in one cluster are the objects whose letter ordinal is a prime number, and the second cluster is the remaining objects. The objects are clustered in alphabetical order, with the first letter in predicate2.
+  (:domain mystery_blocksworld)
+  (:objects a b c d e f g h )
+  (:init 
+;; BEGIN EDIT
+    (predicate2 b)
+    (predicate5 c b)
+    (predicate5 e c)
+    (predicate5 g e)
+    (predicate1 g)
+    (predicate2 a)
+    (predicate5 d a)
+    (predicate5 f d)
+    (predicate5 h f)
+    (predicate1 h)
+;; END EDIT
+    (predicate3)
+  )
+  (:goal (and 
+    (predicate2 a)
+    (predicate5 b a)
+    (predicate5 c b)
+    (predicate2 d)
+    (predicate5 e d)
+    (predicate5 f e)
+    (predicate2 g)
+    (predicate5 h g)
+  ))
+)

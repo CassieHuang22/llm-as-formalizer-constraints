@@ -1,0 +1,1 @@
+The goal of the task is to have all the blocks in a single tower, with all the blocks in order with the highest number block on the table and the lowest block on top.

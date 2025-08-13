@@ -1,0 +1,1 @@
+You must end the task with the objects in 2 clusters. The even numbered objects in one cluster and the odd numbered objects in another cluster. The objects are clustered in order with the lowest number object in predicate2 and the highest object in predicate1.

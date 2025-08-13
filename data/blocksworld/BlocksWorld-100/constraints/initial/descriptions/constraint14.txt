@@ -1,0 +1,1 @@
+You start with the blocks in 3 stacks. The blocks in one tower are every third letter and the other tower does not contain every third letter but its index is odd, the final tower contains blocks that are not every third letter, but the letter index is even. The towers are stacked in alphabetical order with the lowest index letter on the table.

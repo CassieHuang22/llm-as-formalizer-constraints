@@ -1,0 +1,1 @@
+You must end the task with the blocks in 2 stacks. The blocks in one tower are prime numbers and the other tower does not contain prime numbers. The towers are stacked in order with the lowest number block on the table and the highest block on top.

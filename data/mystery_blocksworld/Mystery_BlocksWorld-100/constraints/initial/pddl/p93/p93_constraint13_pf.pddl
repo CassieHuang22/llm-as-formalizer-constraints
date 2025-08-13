@@ -1,0 +1,32 @@
+(define (problem mystery_blocksworld-p93)
+;; CONSTRAINT You start with the objects in 2 clusters. The objects in one cluster are every fifth letter and the objects in the second cluster are the remaining objects. The objects are clustered in alphabetical order with the first object in predicate2.
+  (:domain mystery_blocksworld)
+  (:objects a b c d e f g h i )
+  (:init 
+;; BEGIN EDIT
+    (predicate2 e)
+    (predicate1 e)
+    (predicate2 a)
+    (predicate5 b a)
+    (predicate5 c b)
+    (predicate5 d c)
+    (predicate5 f d)
+    (predicate5 g f)
+    (predicate5 h g)
+    (predicate5 i h)
+    (predicate1 i)
+;; END EDIT
+    (predicate3)
+  )
+  (:goal (and 
+    (predicate2 a)
+    (predicate5 b a)
+    (predicate5 c b)
+    (predicate5 d c)
+    (predicate5 e d)
+    (predicate5 f e)
+    (predicate5 g f)
+    (predicate5 h g)
+    (predicate5 i h)
+  ))
+)

@@ -1,0 +1,32 @@
+(define (problem mystery_blocksworld-p09)
+;; CONSTRAINT The weight of each object is its number. Once you start performing actions on the objects, the total weight above an object should not exceed the weight of the object itself.
+  (:domain mystery_blocksworld)
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8 )
+  (:init 
+    (predicate2 object6)
+    (predicate5 object1 object6)
+    (predicate1 object1)
+    (predicate2 object3)
+    (predicate5 object2 object3)
+    (predicate5 object8 object2)
+    (predicate5 object5 object8)
+    (predicate5 object7 object5)
+    (predicate5 object4 object7)
+    (predicate1 object4)
+    (predicate3)
+;; BEGIN ADD
+    (w1 object1)  (w2 object2)  (w3 object3) (w4 object4) (w5 object5) (w6 object6) (w7 object7) (w8 object8)
+    (cap8 object1) (cap8 object2) (cap8 object3) (cap8 object4) (cap8 object5) (cap8 object6) (cap8 object7) (cap8 object8)
+;; END ADD
+  )
+  (:goal (and 
+    (predicate2 object3)
+    (predicate5 object8 object3)
+    (predicate5 object4 object8)
+    (predicate5 object1 object4)
+    (predicate5 object2 object1)
+    (predicate5 object7 object2)
+    (predicate5 object6 object7)
+    (predicate5 object5 object6)
+  ))
+)

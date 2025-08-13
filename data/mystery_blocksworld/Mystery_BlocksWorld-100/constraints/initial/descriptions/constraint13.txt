@@ -1,0 +1,1 @@
+You start with the objects in 2 clusters. The objects in one cluster are every fifth letter and the objects in the second cluster are the remaining objects. The objects are clustered in alphabetical order with the first object in predicate2.

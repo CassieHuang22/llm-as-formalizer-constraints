@@ -1,0 +1,43 @@
+(define (problem mystery_blocksworld-p98)
+;; CONSTRAINT You start with g in predicate4.
+  (:domain mystery_blocksworld)
+  (:objects a b c d e f g h i j k l m )
+  (:init 
+    (predicate2 a)
+    (predicate5 b a)
+    (predicate5 c b)
+    (predicate1 c)
+    (predicate2 d)
+    (predicate5 e d)
+    (predicate5 f e)
+;; BEGIN EDIT
+    (predicate1 f)
+    (predicate4 g)
+;; END EDIT
+    (predicate2 h)
+    (predicate5 i h)
+    (predicate5 j i)
+    (predicate5 k j)
+    (predicate5 l k)
+    (predicate1 l)
+    (predicate2 m)
+    (predicate1 m)
+;; BEGIN DELETE
+;; END DELETE
+  )
+  (:goal (and 
+    (predicate2 a)
+    (predicate5 b a)
+    (predicate5 c b)
+    (predicate5 d c)
+    (predicate5 e d)
+    (predicate5 f e)
+    (predicate5 g f)
+    (predicate5 h g)
+    (predicate5 i h)
+    (predicate5 j i)
+    (predicate5 k j)
+    (predicate5 l k)
+    (predicate5 m l)
+  ))
+)

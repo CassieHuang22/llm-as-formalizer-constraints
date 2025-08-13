@@ -1,0 +1,1 @@
+Once you start performing actions on the objects, you must have exactly 10 clusters at any time

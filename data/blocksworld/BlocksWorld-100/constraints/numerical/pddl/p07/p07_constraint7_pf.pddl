@@ -1,0 +1,46 @@
+(define (problem blocksworld-p07)
+;; CONSTRAINT Once you start moving blocks, you must have exactly 10 stacks at any time.
+  (:domain blocksworld)
+;; BEGIN EDIT
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 block9 block10 - block
+  s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 - stackpos)
+;; END EDIT
+  (:init 
+    (on-table block8)
+    (on block4 block8)
+    (on block1 block4)
+    (on block2 block1)
+    (clear block2)
+    (on-table block9)
+    (clear block9)
+    (on-table block3)
+    (on block6 block3)
+    (clear block6)
+    (on-table block7)
+    (clear block7)
+    (on-table block5)
+    (on block10 block5)
+    (clear block10)
+    (arm-empty)
+;; BEGIN ADD
+    (assigned block8 s1) (used s1)
+    (assigned block9 s2) (used s2)
+    (assigned block3 s3) (used s3)
+    (assigned block7 s4) (used s4)
+    (assigned block5 s5) (used s5)
+    (assigned block10 s6) (used s6)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block5)
+    (on-table block2)
+    (on-table block10)
+    (on-table block3)
+    (on-table block8)
+    (on-table block4)
+    (on-table block6)
+    (on-table block7)
+    (on-table block1)
+    (on-table block9)
+  ))
+)

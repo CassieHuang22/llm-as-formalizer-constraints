@@ -1,0 +1,1 @@
+Once you performing actions on the blocks, you must have exactly 3 clusters at any time.

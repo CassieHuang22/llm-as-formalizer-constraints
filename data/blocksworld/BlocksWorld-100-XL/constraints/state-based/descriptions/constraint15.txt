@@ -1,0 +1,1 @@
+Block 1 cannot be stack on block2 and block2 cannot be stack on block3.

@@ -1,0 +1,1 @@
+You must alternate between moving even numbered blocks and odd numbered blocks in each move.

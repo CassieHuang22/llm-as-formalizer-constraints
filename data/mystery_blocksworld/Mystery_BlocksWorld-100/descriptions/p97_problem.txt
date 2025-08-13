@@ -1,0 +1,2 @@
+As initial conditions I have that predicate2 a, predicate5 b a, predicate5 c b, predicate1 c, predicate2 d, predicate5 e d, predicate5 f e, predicate1 f, predicate2 g, predicate1 g, predicate2 h, predicate1 h, predicate2 i, predicate5 j i, predicate5 k j, predicate5 l k, predicate1 l, and predicate3.
+My goal is to have that predicate2 a, predicate5 b a, predicate5 c b, predicate5 d c, predicate5 e d, predicate5 f e, predicate5 g f, predicate5 h g, predicate5 i h, predicate5 j i, predicate5 k j, and predicate5 l k.

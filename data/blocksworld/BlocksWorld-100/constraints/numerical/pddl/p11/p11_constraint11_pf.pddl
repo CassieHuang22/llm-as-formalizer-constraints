@@ -1,0 +1,45 @@
+(define (problem blocksworld-p11)
+;; CONSTRAINT Once you start moving blocks, you must have exactly 6 stacks at any time.
+  (:domain blocksworld)
+;; BEGIN EDIT
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 block9 block10 block11 block12 - block
+  s1 s2 s3 s4 s5 s6 - stackpos)
+;; END EDIT
+  (:init 
+    (on-table block9)
+    (on block2 block9)
+    (on block1 block2)
+    (on block6 block1)
+    (clear block6)
+    (on-table block7)
+    (on block5 block7)
+    (clear block5)
+    (on-table block10)
+    (on block4 block10)
+    (on block3 block4)
+    (on block12 block3)
+    (on block8 block12)
+    (on block11 block8)
+    (clear block11)
+    (arm-empty)
+;; BEGIN ADD
+    (assigned block9 s1) (used s1)
+    (assigned block7 s2) (used s2)
+    (assigned block10 s3) (used s3)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block9)
+    (on-table block12)
+    (on-table block10)
+    (on-table block5)
+    (on block11 block5)
+    (on-table block6)
+    (on-table block7)
+    (on-table block2)
+    (on-table block3)
+    (on-table block4)
+    (on block1 block4)
+    (on-table block8)
+  ))
+)

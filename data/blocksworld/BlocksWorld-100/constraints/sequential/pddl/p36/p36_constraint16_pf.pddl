@@ -1,0 +1,32 @@
+(define (problem blocksworld-p36)
+;; CONSTRAINT You must start by moving an even numbered block, then alternate between moving odd numbered blocks and even numbered blocks.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8)
+  (:init 
+    (on-table block5)
+    (on block2 block5)
+    (on block4 block2)
+    (on block8 block4)
+    (on block6 block8)
+    (on block3 block6)
+    (on block7 block3)
+    (on block1 block7)
+    (clear block1)
+    (arm-empty)
+;; BEGIN ADD
+    (odd block1) (odd block3) (odd block5) (odd block7)
+    (even block2) (even block4) (even block6) (even block8)
+    (last-none)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block6)
+    (on block1 block6)
+    (on block7 block1)
+    (on block2 block7)
+    (on block8 block2)
+    (on block3 block8)
+    (on block5 block3)
+    (on block4 block5)
+  ))
+)

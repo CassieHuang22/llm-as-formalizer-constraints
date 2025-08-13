@@ -1,0 +1,32 @@
+(define (problem blocksworld-p09)
+;; CONSTRAINT The weight of each block is its number. Once you start moving blocks, the total weight above a block should not exceed the weight of the block itself.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 )
+  (:init 
+    (on-table block6)
+    (on block1 block6)
+    (clear block1)
+    (on-table block3)
+    (on block2 block3)
+    (on block8 block2)
+    (on block5 block8)
+    (on block7 block5)
+    (on block4 block7)
+    (clear block4)
+    (arm-empty)
+;; BEGIN ADD
+    (w1 block1)  (w2 block2)  (w3 block3) (w4 block4) (w5 block5) (w6 block6) (w7 block7) (w8 block8)
+    (cap8 block1) (cap8 block2) (cap8 block3) (cap8 block4) (cap8 block5) (cap8 block6) (cap8 block7) (cap8 block8)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block3)
+    (on block8 block3)
+    (on block4 block8)
+    (on block1 block4)
+    (on block2 block1)
+    (on block7 block2)
+    (on block6 block7)
+    (on block5 block6)
+  ))
+)

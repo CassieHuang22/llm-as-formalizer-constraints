@@ -1,0 +1,1 @@
+You start with all objects in a single cluster in numerical order, with lowest number object in predicate2 and the highest number object in predicate1.

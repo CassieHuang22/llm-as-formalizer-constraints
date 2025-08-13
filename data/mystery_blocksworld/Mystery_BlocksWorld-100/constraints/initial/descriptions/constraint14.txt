@@ -1,0 +1,1 @@
+You start with the objects in 3 clusters. The objects in one cluster are every third letter and the other cluster does not contain every third letter but its index is odd, the final cluster contains objects that are not every third letter, but the letter index is even. The objects are clustered in alphabetical order with the lowest index letter in predicate2.

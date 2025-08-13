@@ -1,0 +1,1 @@
+The weight of each object is its number. Once you start performing actions on the objects, the total weight above an object should not exceed the weight of the object itself.

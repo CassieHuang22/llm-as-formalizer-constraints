@@ -1,0 +1,1 @@
+Once you perform action3 an object, you cannot perform action4 on the same object.

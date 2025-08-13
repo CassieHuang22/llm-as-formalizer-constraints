@@ -1,0 +1,1 @@
+Once you put down a block on the table, you cannot pick it back up.

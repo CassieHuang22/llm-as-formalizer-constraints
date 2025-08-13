@@ -1,0 +1,32 @@
+(define (problem mystery_blocksworld-p51)
+;; CONSTRAINT Do not perform action3 with object1 and object3.
+  (:domain mystery_blocksworld)
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8 object9 )
+  (:init 
+    (predicate2 object7)
+    (predicate5 object2 object7)
+    (predicate5 object9 object2)
+    (predicate5 object1 object9)
+    (predicate5 object4 object1)
+    (predicate5 object6 object4)
+    (predicate5 object5 object6)
+    (predicate5 object3 object5)
+    (predicate5 object8 object3)
+    (predicate1 object8)
+    (predicate3)
+;; BEGIN ADD
+    (not-allowed object1 object3)
+;; END ADD
+  )
+  (:goal (and 
+    (predicate2 object8)
+    (predicate5 object9 object8)
+    (predicate2 object2)
+    (predicate5 object4 object2)
+    (predicate5 object3 object4)
+    (predicate5 object7 object3)
+    (predicate2 object6)
+    (predicate2 object1)
+    (predicate5 object5 object1)
+  ))
+)

@@ -1,0 +1,1 @@
+You start with the objects in 2 clusters. One tower constains objects with every second letter, the remaining objects are in the second cluster. The objects are clustered in alphabetical order, with the first letter in predicate2.

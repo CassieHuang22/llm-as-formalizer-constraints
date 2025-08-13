@@ -1,0 +1,1 @@
+The goal of the task is to have all the objects in a single cluster, with all the objects in order with the lowest number objects in predicate2 and the highest objects in predicate1.

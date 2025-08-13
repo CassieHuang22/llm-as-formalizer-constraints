@@ -1,0 +1,1 @@
+You start with the blocks in 3 stacks. The blocks in one tower are multiples of four and the other tower does not contain multiples of four and are odd, the final tower contains blocks that are not multiples of four and are even. The towers are stacked in order, with the lowest numbered block on the table and the highest numbered block on top.

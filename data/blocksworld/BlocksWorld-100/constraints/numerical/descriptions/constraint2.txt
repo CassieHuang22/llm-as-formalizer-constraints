@@ -1,0 +1,1 @@
+The higher number the block, the heavier it is. Once you start moving blocks, do not stack lighter blocks on heavier blocks.

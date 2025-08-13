@@ -1,0 +1,4 @@
+(pickup block hand)
+(putdown block hand)
+(unstack block1 block2 hand)
+(stack block1 block2 hand)

@@ -1,0 +1,1 @@
+You must end the task with the objects in 2 clusters. The objects in one cluster are multiples of 4 and the other cluster does not contain multiples of 4. The objects are clustered in order with the lowest number object in predicate2 and the highest object in predicate1.

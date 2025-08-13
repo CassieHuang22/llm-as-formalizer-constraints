@@ -1,0 +1,2 @@
+As initial conditions I have that predicate2 object2, predicate5 object6 object2, predicate5 object4 object6, predicate1 object4, predicate2 object3, predicate1 object3, predicate2 object1, predicate5 object5 object1, predicate5 object7 object5, predicate5 object8 object7, predicate1 object8, and predicate3.
+My goal is to have that predicate2 object5, predicate5 object6 object5, predicate2 object4, predicate2 object1, predicate2 object3, predicate2 object7, predicate2 object2, and predicate2 object8.

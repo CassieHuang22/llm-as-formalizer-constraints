@@ -1,0 +1,1 @@
+Block 4 is fragile and no other block can be placed on top of it.

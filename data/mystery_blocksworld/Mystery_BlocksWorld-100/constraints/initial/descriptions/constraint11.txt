@@ -1,0 +1,1 @@
+You start with the blocks in 2 clusters. The objects in one cluster are every fourth letter and the other cluster is the remaining objects. The objects are clustered in alphabetical order with the first letter in predicate2.

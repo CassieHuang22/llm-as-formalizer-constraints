@@ -1,0 +1,31 @@
+(define (problem mystery_blocksworld-p83)
+;; CONSTRAINT You start with all objects in a single cluster in numerical order, with highest number object in predicate2 and the lowest number object in predicate1.
+  (:domain mystery_blocksworld)
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8 object9 )
+  (:init 
+;; BEGIN EDIT
+    (predicate2 object9)
+    (predicate5 object8 object9)
+    (predicate5 object7 object8)
+    (predicate5 object6 object7)
+    (predicate5 object5 object6)
+    (predicate5 object4 object5)
+    (predicate5 object3 object4)
+    (predicate5 object2 object3)
+    (predicate5 object1 object2)
+    (predicate1 object1)
+;; END EDIT
+    (predicate3)
+  )
+  (:goal (and 
+    (predicate2 object6)
+    (predicate2 object7)
+    (predicate2 object3)
+    (predicate2 object8)
+    (predicate2 object1)
+    (predicate2 object5)
+    (predicate2 object9)
+    (predicate2 object4)
+    (predicate2 object2)
+  ))
+)

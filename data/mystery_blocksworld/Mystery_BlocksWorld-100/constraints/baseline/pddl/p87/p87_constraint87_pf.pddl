@@ -1,0 +1,17 @@
+(define (problem mystery_blocksworld-p98)
+  (:domain mystery_blocksworld)
+  (:objects a b c )
+  (:init 
+    (predicate2 b)
+    (predicate5 a b)
+    (predicate1 a)
+    (predicate2 c)
+    (predicate1 c)
+    (predicate3)
+  )
+  (:goal (and 
+    (predicate2 c)
+    (predicate5 b c)
+    (predicate5 a b)
+  ))
+)

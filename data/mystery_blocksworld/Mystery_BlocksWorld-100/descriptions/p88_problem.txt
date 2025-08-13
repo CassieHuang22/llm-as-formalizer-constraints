@@ -1,0 +1,2 @@
+As initial conditions I have that predicate2 red, predicate5 blue red, predicate1 blue, predicate2 green, predicate5 yellow green, predicate1 yellow, and predicate3.
+My goal is to have that predicate2 red, predicate5 green red, predicate5 yellow green, and predicate5 blue yellow.

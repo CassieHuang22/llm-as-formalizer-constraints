@@ -1,0 +1,1 @@
+You start with all blocks in a single tower in numerical order, with lowest number block on the table and the highest number block on top.

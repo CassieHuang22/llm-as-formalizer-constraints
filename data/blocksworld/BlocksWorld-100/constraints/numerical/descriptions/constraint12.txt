@@ -1,0 +1,1 @@
+Once you start moving blocks, you must have no more than 1 stacks at any time.

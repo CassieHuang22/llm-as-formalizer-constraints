@@ -1,0 +1,42 @@
+(define (problem blocksworld-p97)
+;; CONSTRAINT You start by holding block C.
+  (:domain blocksworld)
+  (:objects a b c d e f g h i j k l )
+  (:init 
+    (on-table a)
+    (on b a)
+;; BEGIN EDIT
+    (clear b)
+    (holding c )
+;; END EDIT
+    (on-table d)
+    (on e d)
+    (on f e)
+    (clear f)
+    (on-table g)
+    (clear g)
+    (on-table h)
+    (clear h)
+    (on-table i)
+    (on j i)
+    (on k j)
+    (on l k)
+    (clear l)
+;; BEGIN DELETE
+;; END DELETE
+  )
+  (:goal (and 
+    (on-table a)
+    (on b a)
+    (on c b)
+    (on d c)
+    (on e d)
+    (on f e)
+    (on g f)
+    (on h g)
+    (on i h)
+    (on j i)
+    (on k j)
+    (on l k)
+  ))
+)

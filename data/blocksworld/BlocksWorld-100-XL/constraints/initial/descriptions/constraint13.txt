@@ -1,0 +1,1 @@
+You start with the blocks in 2 stacks. The blocks in one tower are multiples of five and the blocks in the second tower are the remaining blocks. The towers are stacked in order with the lowest numbered block on the table, and the highest numbered block on top.

@@ -1,0 +1,1 @@
+You start with the blocks in 2 stacks. One tower constains even numbered blocks, the remaining blocks are in the second tower. The towers are stacked in order, with the lowest numbered block on the table and the highest number block on top.

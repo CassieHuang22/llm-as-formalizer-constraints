@@ -1,0 +1,4 @@
+(pickup block slot)
+(putdown block slot)
+(stack block1 block2)
+(unstack block1 block2)

@@ -1,0 +1,30 @@
+(define (problem blocksworld-p92)
+;; You start with the blocks in 2 stacks. The blocks in one tower are the blocks whose letter ordinal is a prime number, and the second tower is the remaining blocks. The towers are stacked in alphabetical order, with the first letter on the table.
+  (:domain blocksworld)
+  (:objects a b c d e f g h )
+  (:init 
+;; BEGIN EDIT
+    (on-table b)
+    (on c b)
+    (on e c)
+    (on g e)
+    (clear g)
+    (on-table a)
+    (on d a)
+    (on f d)
+    (on h f)
+    (clear h)
+;; END EDIT
+    (arm-empty)
+  )
+  (:goal (and 
+    (on-table a)
+    (on b a)
+    (on c b)
+    (on-table d)
+    (on e d)
+    (on f e)
+    (on-table g)
+    (on h g)
+  ))
+)

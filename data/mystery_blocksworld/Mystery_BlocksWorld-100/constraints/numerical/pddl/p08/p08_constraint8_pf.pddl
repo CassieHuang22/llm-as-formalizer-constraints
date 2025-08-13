@@ -1,0 +1,47 @@
+(define (problem mystery_blocksworld-p09)
+;; CONSTRAINT Only 15 uses of action1 are allowed in the entire task.
+  (:domain mystery_blocksworld)
+;; BEGIN EDIT
+  (:objects object1 object2 object3 object4 object5 object6 object7 object8 object9 object10 - object
+            t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 - token)
+;; END EDIT
+  (:init 
+    (predicate2 object3)
+    (predicate1 object3)
+    (predicate2 object4)
+    (predicate1 object4)
+    (predicate2 object10)
+    (predicate5 object8 object10)
+    (predicate1 object8)
+    (predicate2 object7)
+    (predicate1 object7)
+    (predicate2 object2)
+    (predicate1 object2)
+    (predicate2 object6)
+    (predicate1 object6)
+    (predicate2 object1)
+    (predicate1 object1)
+    (predicate2 object5)
+    (predicate1 object5)
+    (predicate2 object9)
+    (predicate1 object9)
+    (predicate3)
+;; BEGIN ADD
+    (unused t1)  (unused t2)  (unused t3)  (unused t4)  (unused t5)
+    (unused t6)  (unused t7)  (unused t8)  (unused t9)  (unused t10)
+    (unused t11) (unused t12) (unused t13) (unused t14) (unused t15)
+;; END ADD
+  )
+  (:goal (and 
+    (predicate2 object1)
+    (predicate2 object5)
+    (predicate5 object7 object5)
+    (predicate5 object8 object7)
+    (predicate5 object4 object8)
+    (predicate5 object2 object4)
+    (predicate2 object6)
+    (predicate5 object3 object6)
+    (predicate5 object9 object3)
+    (predicate2 object10)
+  ))
+)

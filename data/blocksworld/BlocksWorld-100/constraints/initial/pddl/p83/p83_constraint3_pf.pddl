@@ -1,0 +1,31 @@
+(define (problem blocksworld-p83)
+;; CONSTRAINT You start with all blocks in a single tower in numerical order, with highest number block on the table and the lowest number block on top.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 block9 )
+  (:init 
+;; BEGIN EDIT
+    (on-table block9)
+    (on block8 block9)
+    (on block7 block8)
+    (on block6 block7)
+    (on block5 block6)
+    (on block4 block5)
+    (on block3 block4)
+    (on block2 block3)
+    (on block1 block2)
+    (clear block1)
+;; END EDIT
+    (arm-empty)
+  )
+  (:goal (and 
+    (on-table block6)
+    (on-table block7)
+    (on-table block3)
+    (on-table block8)
+    (on-table block1)
+    (on-table block5)
+    (on-table block9)
+    (on-table block4)
+    (on-table block2)
+  ))
+)

@@ -1,0 +1,3 @@
+(unstack block2 block1)
+(putdown block2)
+; cost = 2 (unit cost)

@@ -1,0 +1,1 @@
+You must end the task with the blocks in 2 stacks. The even blocks in one tower and the odd blocks in another tower. The towers are stacked in order with the lowest number block on the table and the highest block on top.

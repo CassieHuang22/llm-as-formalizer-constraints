@@ -1,0 +1,4 @@
+(pickup block stackpos)
+(putdown block stackpos)
+(stack block1 block2 stackpos)
+(unstack block1 block2 stackpos)

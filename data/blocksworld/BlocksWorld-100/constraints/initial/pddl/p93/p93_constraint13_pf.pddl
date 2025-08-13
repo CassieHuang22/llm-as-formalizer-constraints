@@ -1,0 +1,32 @@
+(define (problem blocksworld-p93)
+;; CONSTRAINT You start with the blocks in 2 stacks. The blocks in one tower are every fifth letter and the blocks in the second tower are the remaining blocks. The towers are stacked in alphabetical order with the first block on the table.
+  (:domain blocksworld)
+  (:objects a b c d e f g h i )
+  (:init 
+;; BEGIN EDIT
+    (on-table e)
+    (clear e)
+    (on-table a)
+    (on b a)
+    (on c b)
+    (on d c)
+    (on f d)
+    (on g f)
+    (on h g)
+    (on i h)
+    (clear i)
+;; END EDIT
+    (arm-empty)
+  )
+  (:goal (and 
+    (on-table a)
+    (on b a)
+    (on c b)
+    (on d c)
+    (on e d)
+    (on f e)
+    (on g f)
+    (on h g)
+    (on i h)
+  ))
+)

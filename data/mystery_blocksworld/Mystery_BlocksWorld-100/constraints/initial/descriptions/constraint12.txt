@@ -1,0 +1,1 @@
+You start with the objects in 2 clusters. The objects in one cluster are the objects whose letter ordinal is a prime number, and the second cluster is the remaining objects. The objects are clustered in alphabetical order, with the first letter in predicate2.

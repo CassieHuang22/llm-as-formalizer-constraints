@@ -1,0 +1,1 @@
+If you move block1, you must move block2 immediately after. If you move block2 you must move block3 immediately after.

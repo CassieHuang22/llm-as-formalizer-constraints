@@ -1,0 +1,1 @@
+If you perform a set of objects on object1, you must perform a set of actions on object2 immediately after. If you perform a set of actions on object2 you must perform a set of actions on object3 immediately after.

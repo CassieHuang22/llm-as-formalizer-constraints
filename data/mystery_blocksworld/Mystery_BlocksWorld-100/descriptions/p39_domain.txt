@@ -1,0 +1,21 @@
+I am playing with a set of objects. Here are the actions I can do
+
+   action1 object
+   action4 object1 object2
+   action2 object
+   action3 object1 object2
+
+I have the following restrictions on my actions:
+    To perform action1, the following facts need to be true: predicate1 object, predicate2 object, predicate3.
+    Once action1 is performed the following facts will be true: predicate4 object.
+    Once action1 is performed the following facts will be false:  predicate1 object, predicate2 object, predicate3.
+    To perform action2, the following facts need to be true: predicate4 object.
+    Once action2 is performed the following facts will be true: predicate1 object, predicate2 object, predicate3.    
+    Once action2 is performed the following facts will be false: predicate4 object.
+    To perform action3, the following needs to be true: predicate1 object2, predicate4 object1.
+    Once action3 action is performed the following will be true: predicate3, predicate1 object1, predicate5 object1 object2.
+    Once action3 action is performed the following will be false: predicate1 object2, predicate4 object1.
+    To perform action4 action, the following needs to be true: predicate5 object1 object2, predicate1 object1, predicate3.
+    Once action4 action is performed the following will be true: predicate4 object1, predicate1 object2.
+    Once action4 action is performed the following will be false:, predicate5 object1 object2, predicate1 object1, predicate3.
+    

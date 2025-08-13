@@ -1,0 +1,1 @@
+You must end the task with the blocks in 3 stacks. The blocks in one tower are multiple of 4 and the other tower does not contain multiples of 4 but are odd, the final tower contains blocks that are not multiples of 4 but are even. The towers are stacked in order with the lowest number block on the table and the highest block on top.

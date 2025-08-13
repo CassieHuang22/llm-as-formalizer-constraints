@@ -1,0 +1,1 @@
+You start with the blocks in 2 stacks. One tower constains blocks with every second letter, the remaining blocks are in the second tower. The towers are stacked in alphabetical order, with the first letter on the table.

@@ -1,0 +1,1 @@
+The weight of each block is its number. Once you start moving blocks, the total weight above a block should not exceed the weight of the block itself.

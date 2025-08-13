@@ -1,0 +1,47 @@
+(define (problem blocksworld-p09)
+;; CONSTRAINT Only 15 block pick ups are allowed in the entire task.
+  (:domain blocksworld)
+;; BEGIN EDIT
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 block9 block10 - block
+            t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 - token)
+;; END EDIT
+  (:init 
+    (on-table block3)
+    (clear block3)
+    (on-table block4)
+    (clear block4)
+    (on-table block10)
+    (on block8 block10)
+    (clear block8)
+    (on-table block7)
+    (clear block7)
+    (on-table block2)
+    (clear block2)
+    (on-table block6)
+    (clear block6)
+    (on-table block1)
+    (clear block1)
+    (on-table block5)
+    (clear block5)
+    (on-table block9)
+    (clear block9)
+    (arm-empty)
+;; BEGIN ADD
+    (unused t1)  (unused t2)  (unused t3)  (unused t4)  (unused t5)
+    (unused t6)  (unused t7)  (unused t8)  (unused t9)  (unused t10)
+    (unused t11) (unused t12) (unused t13) (unused t14) (unused t15)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block1)
+    (on-table block5)
+    (on block7 block5)
+    (on block8 block7)
+    (on block4 block8)
+    (on block2 block4)
+    (on-table block6)
+    (on block3 block6)
+    (on block9 block3)
+    (on-table block10)
+  ))
+)

@@ -1,0 +1,33 @@
+(define (problem blocksworld-p53)
+;; CONSTRAINT Do not stack block1 on top of block5.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 block8 )
+  (:init 
+    (on-table block5)
+    (clear block5)
+    (on-table block1)
+    (clear block1)
+    (on-table block6)
+    (on block8 block6)
+    (clear block8)
+    (on-table block7)
+    (on block4 block7)
+    (on block3 block4)
+    (on block2 block3)
+    (clear block2)
+    (arm-empty)
+;; BEGIN ADD
+    (do-not-stack block1 block5)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block6)
+    (on block7 block6)
+    (on block2 block7)
+    (on-table block1)
+    (on-table block8)
+    (on block3 block8)
+    (on block5 block3)
+    (on block4 block5)
+  ))
+)

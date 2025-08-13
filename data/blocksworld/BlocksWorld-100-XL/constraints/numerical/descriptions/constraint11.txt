@@ -1,0 +1,1 @@
+Once you start moving blocks, you must have exactly 6 stacks at any time.

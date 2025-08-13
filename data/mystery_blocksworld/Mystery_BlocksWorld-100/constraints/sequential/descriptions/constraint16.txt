@@ -1,0 +1,1 @@
+You must start by performing a set of actions on an even numbered object, then alternate between performing sets of actions on odd numbered objects and even numbered objects.

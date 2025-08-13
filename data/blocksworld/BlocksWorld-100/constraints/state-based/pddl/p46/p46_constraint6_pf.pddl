@@ -1,0 +1,32 @@
+(define (problem blocksworld-p46)
+;; CONSTRAINT Block 2 is fragile and no other block can be placed on top of it.
+  (:domain blocksworld)
+  (:objects block1 block2 block3 block4 block5 block6 block7 )
+  (:init 
+    (on-table block5)
+    (on block3 block5)
+    (clear block3)
+    (on-table block7)
+    (clear block7)
+    (on-table block1)
+    (clear block1)
+    (on-table block2)
+    (on block4 block2)
+    (clear block4)
+    (on-table block6)
+    (clear block6)
+    (arm-empty)
+;; BEGIN ADD
+    (fragile block2)
+;; END ADD
+  )
+  (:goal (and 
+    (on-table block3)
+    (on-table block2)
+    (on-table block7)
+    (on-table block6)
+    (on-table block1)
+    (on-table block4)
+    (on-table block5)
+  ))
+)
