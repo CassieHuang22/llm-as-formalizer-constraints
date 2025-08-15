@@ -55,7 +55,7 @@ Each dataset has the following folders:
 To run the LLM-as-Planner pipeline, run the following:
 ```
 cd source/pipeline
-python llm-as-planner.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python llm-as-planner.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 where 
 - `--domain` is which domain to evaluate (`blocksworld` or `mystery_blocksworld`)
@@ -75,7 +75,7 @@ output will be written in `/output/llm-as-planner/DOMAIN/DATA/MODEL/CONSTRAINT_T
 To generate entire PDDL (without revision), run the following:
 ```
 cd source/pipeline
-python pddl_formalizer_generate.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python pddl_formalizer_generate.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 
 output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/generate/MODEL/CONSTRAINT_TYPE`
@@ -84,8 +84,8 @@ output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/generate/MODEL/
 To first generate the PDDL without constraints then edit the output to satisfy the new constraint (without revision), run the following:
 ```
 cd source/pipeline
-python pddl_formalizer_edit_1.py --domain DOMAIN --data DATA --model MODEL [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END]
-python pddl_formalizer_edit_2.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python pddl_formalizer_edit_1.py --domain DOMAIN --data DATA --model MODEL --default | --problem_start PROBLEM_START --problem_end PROBLEM_END
+python pddl_formalizer_edit_2.py --domain DOMAIN --data DATA --model MODEL --constraint_type CONSTRAINT_TYPE --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 
 output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/edit/MODEL/CONSTRAINT_TYPE`
@@ -94,7 +94,7 @@ output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/edit/MODEL/CONS
 To revise generated PDDL with deepseek models (`deepseek-reasoner` or `deepseek-chat`), run the following:
 ```
 cd source/pipeline
-python pddl_formalizer_revision_deepseek.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --solver SOLVER [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python pddl_formalizer_revision_deepseek.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --solver SOLVER --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 
 where
@@ -104,7 +104,7 @@ where
 To revise generated PDDL with Qwen models (`Qwen3-32B` or `Qwen2.5-Coder-32B-Instruct`), run the following:
 ```
 cd source/pipeline
-python pddl_formalizer_revision_qwen.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --solver SOLVER [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python pddl_formalizer_revision_qwen.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --solver SOLVER --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 
 output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/revisions/RUN_TYPE/MODEL/CONSTRAINT_TYPE`
@@ -113,7 +113,7 @@ output will be written in `/output/llm-as-formalizer/DOMAIN/DATA/revisions/RUN_T
 After generating the PDDL, we can run the solver using the following:
 ```
 cd source/pipeline
-python run_solver.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE [--revision] --solver SOLVER [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END]
+python run_solver.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE [--revision] --solver SOLVER --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END
 ```
 where `--revision` is an optional flag to run the solver for the generated PDDL after revision is introduced.
 
@@ -126,7 +126,7 @@ output will be written as `.txt` in the same folder as the generated PDDL
 To evaluate the result of LLM-as-PDDL-Formalizer or LLM-as-Planner using VAL, run the following:
 ```
 cd source/pipeline
-python run_val.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --prediction_type PREDICTION_TYPE [--revision] [--default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END] [--csv_result]
+python run_val.py --domain DOMAIN --data DATA --model MODEL --run_type RUN_TYPE --constraint_type CONSTRAINT_TYPE --prediction_type PREDICTION_TYPE [--revision] --default | --problem_start PROBLEM_START --problem_end PROBLEM_END --constraint_start CONSTRAINT_START --constraint_end CONSTRAINT_END [--csv_result]
 ```
 where 
 - `--prediction_type` is which pipeline to use (`llm-as-formalizer` or  `llm-as-planner`).
