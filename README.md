@@ -28,7 +28,7 @@ In `/data` the following folders can be found:
 - `blocksworld`: datasets for the BlocksWorld domain
     * `BlocksWorld-100`: taken from [Huang and Zhang (2025)](https://github.com/CassieHuang22/llm-as-pddl-formalizer) with added constraints.
     * `BlocksWorld-100-XL`: dataset consisting of BlocksWorld instances where each instance contains 50 blocks
-- `coin_collector`: dataset for the CoinCollector domain
+- `coin_collector`: dataset for the [CoinCollector](https://github.com/xingdi-eric-yuan/TextWorld-Coin-Collector) domain
     * `CoinCollector-100_includeDoors0`: dataset of fully-observed CoinCollector problems where closed doors are removed
 - `mystery_blocksworld`: datasets for the [Mystery BlocksWorld domain](https://arxiv.org/pdf/2206.10498)
     * `Mystery_BlocksWorld-100`: dataset of Mystery BlocksWorld instances. Each instance is a `BlocksWorld-100` instance where the keywords are obfuscated.
