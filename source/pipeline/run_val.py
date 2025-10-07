@@ -80,7 +80,7 @@ def validate_plan_batch(domain, data, model, prediction_type, csv_result, constr
 
     if formalizing_type == 'ltl' and constraint_type == 'baseline':
         groundtruth_plan_exists, constraint_descriptions = parse_json_file(domain, data, constraint_type)
-        problem_numbers = [3,4,7,8,12,16,20,58] #list(range(61, 81)) #[3,4,7,8,12,16,20,58,1,2,5,6,9,10,11,13,14,15,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,44,45,46,49,50,53,54,57,59] + list(range(61, 81))
+        problem_numbers = [3,4,7,8,12,16,20,58,1,2,5,6,9,10,11,13,14,15,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,44,45,46,49,50,53,54,57,59] + list(range(61, 81))
         problems = [f'p0{problem_number}' if problem_number < 10 else f'p{problem_number}' for problem_number in problem_numbers]
         constraints = [f'constraint{problem_number}' for problem_number in problem_numbers]
     else:
