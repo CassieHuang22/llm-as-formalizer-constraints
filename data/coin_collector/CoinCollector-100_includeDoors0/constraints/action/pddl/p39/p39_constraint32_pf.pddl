@@ -1,0 +1,47 @@
+(define (problem coin_collector_numLocations11_numDistractorItems0_seed35)
+;; CONSTRAINT You cannot go to the pantry from the kitchen if you haven't visited the backyard.
+  (:domain coin-collector)
+  (:objects
+    kitchen corridor pantry driveway laundry_room bedroom backyard bathroom street living_room supermarket - room
+    north south east west - direction
+    coin - item
+  )
+  (:init
+    (at kitchen)
+    (connected kitchen corridor south)
+    (connected kitchen pantry east)
+    (connected corridor kitchen north)
+    (connected corridor driveway south)
+    (connected corridor laundry_room east)
+    (connected corridor bedroom west)
+    (connected pantry kitchen west)
+    (connected driveway corridor north)
+    (connected driveway backyard east)
+    (connected laundry_room corridor west)
+    (connected laundry_room bathroom east)
+    (connected bedroom corridor east)
+    (connected backyard driveway west)
+    (connected backyard street south)
+    (connected backyard living_room east)
+    (connected bathroom laundry_room west)
+    (connected bathroom living_room south)
+    (connected street backyard north)
+    (connected street supermarket east)
+    (connected living_room backyard west)
+    (connected living_room bathroom north)
+    (connected supermarket street west)
+    (location coin pantry)
+    (is-reverse north south)
+    (is-reverse south north)
+    (is-reverse east west)
+    (is-reverse west east)
+;; BEGIN ADD
+    (first-room kitchen)
+    (second-room pantry)
+    (in-between-room backyard)
+;; END ADD
+  )
+  (:goal 
+    (taken coin)
+  )
+)

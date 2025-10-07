@@ -1,0 +1,1 @@
+You can only move north or move south.

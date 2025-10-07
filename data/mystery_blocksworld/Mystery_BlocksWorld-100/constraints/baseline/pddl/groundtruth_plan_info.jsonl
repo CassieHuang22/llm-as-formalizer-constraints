@@ -55,9 +55,6 @@
 {"problem": "p55", "constraint": "constraint55", "plan_exists": true, "constraint_description": ""}
 {"problem": "p56", "constraint": "constraint56", "plan_exists": true, "constraint_description": ""}
 {"problem": "p57", "constraint": "constraint57", "plan_exists": true, "constraint_description": ""}
-{"problem": "p58", "constraint": "constraint58", "plan_exists": true, "constraint_description": ""}
-{"problem": "p59", "constraint": "constraint59", "plan_exists": true, "constraint_description": ""}
-{"problem": "p60", "constraint": "constraint60", "plan_exists": true, "constraint_description": ""}
 {"problem": "p61", "constraint": "constraint61", "plan_exists": true, "constraint_description": ""}
 {"problem": "p62", "constraint": "constraint62", "plan_exists": true, "constraint_description": ""}
 {"problem": "p63", "constraint": "constraint63", "plan_exists": true, "constraint_description": ""}

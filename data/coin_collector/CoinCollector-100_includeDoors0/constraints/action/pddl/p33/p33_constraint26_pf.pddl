@@ -1,0 +1,40 @@
+(define (problem coin_collector_numLocations9_numDistractorItems0_seed83)
+;; CONSTRAINT You must visit the laundry room before the living room.
+  (:domain coin-collector)
+  (:objects
+    kitchen pantry living_room bathroom bedroom backyard laundry_room corridor driveway - room
+    north south east west - direction
+    coin - item
+  )
+  (:init
+    (at kitchen)
+    (connected kitchen pantry south)
+    (connected kitchen living_room west)
+    (connected pantry kitchen north)
+    (connected living_room kitchen east)
+    (connected living_room bathroom north)
+    (connected living_room bedroom south)
+    (connected living_room backyard west)
+    (connected bathroom living_room south)
+    (connected bathroom laundry_room west)
+    (connected bedroom living_room north)
+    (connected backyard living_room east)
+    (connected backyard corridor west)
+    (connected laundry_room bathroom east)
+    (connected corridor backyard east)
+    (connected corridor driveway north)
+    (connected driveway corridor south)
+    (location coin driveway)
+    (is-reverse north south)
+    (is-reverse south north)
+    (is-reverse east west)
+    (is-reverse west east)
+;; BEGIN ADD
+    (must-visit-before-next laundry_room)
+    (next-room living_room)
+;; END ADD
+  )
+  (:goal 
+    (taken coin)
+  )
+)

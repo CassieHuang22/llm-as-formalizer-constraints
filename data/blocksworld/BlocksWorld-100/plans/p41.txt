@@ -1,7 +1,0 @@
-(unstack block2 block6)
-(putdown block2)
-(unstack block3 block4)
-(putdown block3)
-(pickup block4)
-(stack block4 block3)
-; cost = 6 (unit cost)

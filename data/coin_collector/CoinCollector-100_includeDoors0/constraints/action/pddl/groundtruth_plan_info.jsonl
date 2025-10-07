@@ -1,0 +1,44 @@
+{"problem": "p01", "constraint": "constraint1", "constraint_description": "You must take exactly 2 move actions before taking any coin.", "plan_exists": false}
+{"problem": "p02", "constraint": "constraint2", "constraint_description": "You must visit the corridor twice.", "plan_exists": true}
+{"problem": "p05", "constraint": "constraint3", "constraint_description": "You must take exactly 3 move actions before taking any coin.", "plan_exists": false}
+{"problem": "p06", "constraint": "constraint4", "constraint_description": "You must visit the backyard twice.", "plan_exists": true}
+{"problem": "p09", "constraint": "constraint5", "constraint_description": "You must take exactly 4 move actions before taking any coin.", "plan_exists": true}
+{"problem": "p10", "constraint": "constraint6", "constraint_description": "You must visit the bedroom twice.", "plan_exists": true}
+{"problem": "p11", "constraint": "constraint7", "constraint_description": "You must visit the bathroom at most twice.", "plan_exists": true}
+{"problem": "p13", "constraint": "constraint8", "constraint_description": "You must take exactly 5 move actions before taking any coin.", "plan_exists": false}
+{"problem": "p14", "constraint": "constraint9", "constraint_description": "You must visit the living room twice.", "plan_exists": true}
+{"problem": "p15", "constraint": "constraint10", "constraint_description": "You must visit the corridor at most three times.", "plan_exists": true}
+{"problem": "p17", "constraint": "constraint11", "constraint_description": "You must take exactly 6 move actions before taking any coin.", "plan_exists": true}
+{"problem": "p18", "constraint": "constraint12", "constraint_description": "You must visit the supermarket twice.", "plan_exists": true}
+{"problem": "p19", "constraint": "constraint13", "constraint_description": "You must visit the driveway at most 4 times.", "plan_exists": true}
+{"problem": "p21", "constraint": "constraint14", "constraint_description": "You must visit the corridor before the pantry.", "plan_exists": true}
+{"problem": "p22", "constraint": "constraint15", "constraint_description": "You must visit the pantry twice before going to the corridor.", "plan_exists": true}
+{"problem": "p23", "constraint": "constraint16", "constraint_description": "You can't pick up any coin if you haven't been to the corridor.", "plan_exists": true}
+{"problem": "p24", "constraint": "constraint17", "constraint_description": "If you visit the corridor, you must visit the pantry directly after.", "plan_exists": true}
+{"problem": "p25", "constraint": "constraint18", "constraint_description": "You must visit the bedroom before going to the backyard.", "plan_exists": true}
+{"problem": "p26", "constraint": "constraint19", "constraint_description": "You can't go to the bedroom if you haven't been to the backyard.", "plan_exists": true}
+{"problem": "p27", "constraint": "constraint20", "constraint_description": "If you visit the corridor, you must visit the bedroom directly after.", "plan_exists": true}
+{"problem": "p28", "constraint": "constraint21", "constraint_description": "If you visit the corridor, you must visit the bedroom within the next two moves.", "plan_exists": true}
+{"problem": "p29", "constraint": "constraint22", "constraint_description": "You must visit the bedroom before the bathroom.", "plan_exists": true}
+{"problem": "p30", "constraint": "constraint23", "constraint_description": "You must visit pantry three times before going to the living room.", "plan_exists": true}
+{"problem": "p31", "constraint": "constraint24", "constraint_description": "You can't pick up any coin if you haven't been to the bedroom.", "plan_exists": true}
+{"problem": "p32", "constraint": "constraint25", "constraint_description": "You can't go to the bedroom if you haven't been to the pantry. Also, you cannot pick up any coins if you haven't been to the backyard.", "plan_exists": true}
+{"problem": "p33", "constraint": "constraint26", "constraint_description": "You must visit the laundry room before the living room.", "plan_exists": false}
+{"problem": "p34", "constraint": "constraint27", "constraint_description": "You can't go to the driveway without visiting the bedroom.", "plan_exists": true}
+{"problem": "p35", "constraint": "constraint28", "constraint_description": "If you visit the corridor, you must visit the living room directly after.", "plan_exists": true}
+{"problem": "p36", "constraint": "constraint29", "constraint_description": "If you take the coin, you must go to the kitchen directly after.", "plan_exists": false}
+{"problem": "p37", "constraint": "constraint30", "constraint_description": "If you visit the corridor, you must visit the pantry directly after.", "plan_exists": true}
+{"problem": "p38", "constraint": "constraint31", "constraint_description": "If you visit the corridor, you must visit the bedroom within the next four moves.", "plan_exists": true}
+{"problem": "p39", "constraint": "constraint32", "constraint_description": "You cannot go to the pantry from the kitchen if you haven't visited the backyard.", "plan_exists": true}
+{"problem": "p40", "constraint": "constraint33", "constraint_description": "If you take the coin, you must go to the living room directly after.", "plan_exists": false}
+{"problem": "p41", "constraint": "constraint34", "constraint_description": "Do not move into the corridor.", "plan_exists": false}
+{"problem": "p42", "constraint": "constraint35", "constraint_description": "You can only move south or move west.", "plan_exists": true}
+{"problem": "p44", "constraint": "constraint36", "constraint_description": "Once you visit a new room, you cannot go back to it.", "plan_exists": true}
+{"problem": "p45", "constraint": "constraint37", "constraint_description": "Do not move into the backyard.", "plan_exists": true}
+{"problem": "p46", "constraint": "constraint38", "constraint_description": "", "plan_exists": false}
+{"problem": "p49", "constraint": "constraint39", "constraint_description": "Do not move into the bathroom.", "plan_exists": true}
+{"problem": "p50", "constraint": "constraint40", "constraint_description": "You can only move north or move south.", "plan_exists": false}
+{"problem": "p53", "constraint": "constraint41", "constraint_description": "Do not move into the living room.", "plan_exists": true}
+{"problem": "p54", "constraint": "constraint42", "constraint_description": "You can only move west or move east.", "plan_exists": false}
+{"problem": "p57", "constraint": "constraint43", "constraint_description": "You can now teleport to any room.", "plan_exists": true}
+{"problem": "p59", "constraint": "constraint44", "constraint_description": "Once you move into the living room, you cannot go back to it.", "plan_exists": true}

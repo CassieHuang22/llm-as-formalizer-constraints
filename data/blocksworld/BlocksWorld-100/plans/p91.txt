@@ -1,3 +1,0 @@
-(pickup g)
-(stack g f)
-; cost = 2 (unit cost)

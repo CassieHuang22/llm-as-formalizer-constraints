@@ -1,0 +1,1 @@
+There is now a closed door between the kitchen and pantry. To open the door there is now the (open room1 room2 direction reverse-direction) action.

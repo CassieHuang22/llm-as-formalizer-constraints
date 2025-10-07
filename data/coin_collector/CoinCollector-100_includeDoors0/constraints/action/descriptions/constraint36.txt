@@ -1,0 +1,1 @@
+Once you visit a new room, you cannot go back to it.

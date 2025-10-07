@@ -1,1 +1,0 @@
-There are 4 robot hands, hand1, hand2, hand3 and hand4, so you can move four blocks at a time.

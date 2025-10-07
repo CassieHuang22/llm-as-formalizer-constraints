@@ -1,0 +1,20 @@
+{"problem": "p61", "constraint": "constraint1", "constraint_description": "After taking the coin, you must be in the corridor to end the task.", "plan_exists": true}
+{"problem": "p62", "constraint": "constraint2", "constraint_description": "Without taking the coin, you must be in the kitchen to end the task.", "plan_exists": true}
+{"problem": "p63", "constraint": "constraint3", "constraint_description": "You must not take the coin to end the task.", "plan_exists": true}
+{"problem": "p64", "constraint": "constraint4", "constraint_description": "After taking the coin, you must be in the room furthest south and furthest east to end the task.", "plan_exists": true}
+{"problem": "p65", "constraint": "constraint5", "constraint_description": "After taking the coin, you must be in the pantry to end the task.", "plan_exists": true}
+{"problem": "p66", "constraint": "constraint6", "constraint_description": "Without taking the coin, you must be in the bedroom to end the task.", "plan_exists": true}
+{"problem": "p67", "constraint": "constraint7", "constraint_description": "You must take the salt shaker to end the task.", "plan_exists": false}
+{"problem": "p68", "constraint": "constraint8", "constraint_description": "After taking the coin, you must be in the room furthest north to end the task.", "plan_exists": true}
+{"problem": "p69", "constraint": "constraint9", "constraint_description": "After taking the coin, you must be in the bathroom to end the task.", "plan_exists": true}
+{"problem": "p70", "constraint": "constraint10", "constraint_description": "Without taking the coin, you must be in the living room to end the task.", "plan_exists": true}
+{"problem": "p71", "constraint": "constraint11", "constraint_description": "You must take the pepper shaker to end the task.", "plan_exists": false}
+{"problem": "p72", "constraint": "constraint12", "constraint_description": "After taking the coin, you must be in the room furthest west to end the task.", "plan_exists": true}
+{"problem": "p73", "constraint": "constraint13", "constraint_description": "After taking the coin, you must be in the laundry room to end the task.", "plan_exists": true}
+{"problem": "p74", "constraint": "constraint14", "constraint_description": "Without taking the coin, you must be the backyard to end the task.", "plan_exists": true}
+{"problem": "p75", "constraint": "constraint15", "constraint_description": "You must take the decoy coin to end the task.", "plan_exists": false}
+{"problem": "p76", "constraint": "constraint16", "constraint_description": "After taking the coin, you must be in the room furthest east and furthest north to end the task.", "plan_exists": true}
+{"problem": "p77", "constraint": "constraint17", "constraint_description": "After taking the coin, you must be in the driveway to end the task.", "plan_exists": true}
+{"problem": "p78", "constraint": "constraint18", "constraint_description": "Without taking the coin, you must be in the street to end the task", "plan_exists": true}
+{"problem": "p79", "constraint": "constraint19", "constraint_description": "You must take the coin and the salt shaker to end the task.", "plan_exists": true}
+{"problem": "p80", "constraint": "constraint20", "constraint_description": "After taking the coin, you must be in the room furthest south.", "plan_exists": true}

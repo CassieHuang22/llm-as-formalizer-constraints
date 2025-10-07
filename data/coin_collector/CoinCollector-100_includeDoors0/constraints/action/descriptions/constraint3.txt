@@ -1,0 +1,1 @@
+You must take exactly 3 move actions before taking any coin.

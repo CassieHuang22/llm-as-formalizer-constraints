@@ -1,0 +1,2 @@
+(move room1 room2 direction step1 step2)
+(take item room step)

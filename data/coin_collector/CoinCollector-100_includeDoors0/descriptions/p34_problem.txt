@@ -1,0 +1,11 @@
+You are in the kitchen.
+To the north of the kitchen is the backyard.
+To the south of the kitchen is the laundry room.
+To the east of the kitchen is the bathroom.
+To the west of the kitchen is the pantry.
+To the north of the backyard is the driveway.
+To the east of the backyard is the corridor.
+To the north of the bathroom is the corridor.
+To the south of the bathroom is the living room.
+To the east of the living room is the bedroom.
+There is a coin in the driveway.

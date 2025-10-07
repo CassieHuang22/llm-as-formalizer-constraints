@@ -1,0 +1,41 @@
+(define (problem coin_collector_numLocations9_numDistractorItems0_seed36)
+;; CONSTRAINT You must visit the living room twice.
+  (:domain coin-collector)
+  (:objects
+    kitchen backyard pantry laundry_room driveway living_room corridor bathroom bedroom - room
+    north south east west - direction
+    coin - item
+  )
+  (:init
+    (at kitchen)
+    (connected kitchen backyard south)
+    (connected kitchen pantry east)
+    (connected kitchen laundry_room west)
+    (connected backyard kitchen north)
+    (connected backyard driveway east)
+    (connected backyard living_room west)
+    (connected pantry kitchen west)
+    (connected laundry_room kitchen east)
+    (connected driveway backyard west)
+    (connected living_room backyard east)
+    (connected living_room corridor south)
+    (connected living_room bathroom west)
+    (connected corridor living_room north)
+    (connected corridor bedroom west)
+    (connected bathroom living_room east)
+    (connected bathroom bedroom south)
+    (connected bedroom corridor east)
+    (connected bedroom bathroom north)
+    (location coin living_room)
+    (is-reverse north south)
+    (is-reverse south north)
+    (is-reverse east west)
+    (is-reverse west east)
+;; BEGIN ADD
+    (must-visit living_room)
+;; END ADD
+  )
+  (:goal 
+    (taken coin)
+  )
+)

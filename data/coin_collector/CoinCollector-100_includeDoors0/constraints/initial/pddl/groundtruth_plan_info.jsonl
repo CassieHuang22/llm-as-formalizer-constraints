@@ -1,0 +1,20 @@
+{"problem": "p81", "constraint": "constraint1", "constraint_description": "The coin is in the kitchen.", "plan_exists": true}
+{"problem": "p82", "constraint": "constraint2", "constraint_description": "You start in the corridor.", "plan_exists": true}
+{"problem": "p83", "constraint": "constraint3", "constraint_description": "There is a decoy coin in the kitchen.", "plan_exists": true}
+{"problem": "p84", "constraint": "constraint4", "constraint_description": "There is a another room, the office, west of the kitchen.", "plan_exists": true}
+{"problem": "p85", "constraint": "constraint5", "constraint_description": "The coin is in the corridor.", "plan_exists": true}
+{"problem": "p86", "constraint": "constraint6", "constraint_description": "You start in the pantry.", "plan_exists": true}
+{"problem": "p87", "constraint": "constraint7", "constraint_description": "There is a decoy coin in the corridor.", "plan_exists": true}
+{"problem": "p88", "constraint": "constraint8", "constraint_description": "There is another room, the closet, west of the pantry.", "plan_exists": true}
+{"problem": "p89", "constraint": "constraint9", "constraint_description": "The coin is in the bedroom.", "plan_exists": true}
+{"problem": "p90", "constraint": "constraint10", "constraint_description": "You start in the living room.", "plan_exists": true}
+{"problem": "p91", "constraint": "constraint11", "constraint_description": "There is a decoy coin in the bedroom.", "plan_exists": true}
+{"problem": "p92", "constraint": "constraint12", "constraint_description": "There is another room, the dining room, east of the kitchen.", "plan_exists": true}
+{"problem": "p93", "constraint": "constraint13", "constraint_description": "The coin is in the laundry room.", "plan_exists": true}
+{"problem": "p94", "constraint": "constraint14", "constraint_description": "You start in the bathroom.", "plan_exists": true}
+{"problem": "p95", "constraint": "constraint15", "constraint_description": "There is a decoy coin in the bathroom.", "plan_exists": true}
+{"problem": "p96", "constraint": "constraint16", "constraint_description": "There is another room, the library, south of the corridor.", "plan_exists": true}
+{"problem": "p97", "constraint": "constraint17", "constraint_description": "The coin is in the supermarket.", "plan_exists": true}
+{"problem": "p98", "constraint": "constraint18", "constraint_description": "You start in the supermarket.", "plan_exists": true}
+{"problem": "p99", "constraint": "constraint19", "constraint_description": "There is a decoy coin in the street.", "plan_exists": true}
+{"problem": "p100", "constraint": "constraint20", "constraint_description": "There is another room, the game room, north of the pantry.", "plan_exists": true}

@@ -1,0 +1,41 @@
+{"problem": "p08", "constraint": "constraint1", "constraint_description": "Only 15 uses of action1 are allowed in the entire task.", "plan_exists": true}
+{"problem": "p10", "constraint": "constraint2", "constraint_description": "Only 20 uses of action1 are allowed in the entire task.", "plan_exists": true}
+{"problem": "p15", "constraint": "constraint3", "constraint_description": "Only 5 uses of action1 are allowed in the entire task.", "plan_exists": true}
+{"problem": "p16", "constraint": "constraint4", "constraint_description": "Only 10 uses of action1 are allowed in the entire task.", "plan_exists": true}
+{"problem": "p21", "constraint": "constraint5", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 after.", "plan_exists": true}
+{"problem": "p22", "constraint": "constraint6", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object3 after.", "plan_exists": true}
+{"problem": "p23", "constraint": "constraint7", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object4 after.", "plan_exists": true}
+{"problem": "p24", "constraint": "constraint8", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object5 after.", "plan_exists": false}
+{"problem": "p25", "constraint": "constraint9", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object6 after.", "plan_exists": true}
+{"problem": "p26", "constraint": "constraint10", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 within the next 2 sets of actions.", "plan_exists": true}
+{"problem": "p27", "constraint": "constraint11", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 within the next 3 sets of actions.", "plan_exists": true}
+{"problem": "p28", "constraint": "constraint12", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 within the next 4 sets of actions.", "plan_exists": true}
+{"problem": "p29", "constraint": "constraint13", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 within the next 5 sets of actions.", "plan_exists": true}
+{"problem": "p30", "constraint": "constraint14", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 within the next 6 sets of actions.", "plan_exists": true}
+{"problem": "p31", "constraint": "constraint15", "constraint_description": "You must alternate between performing sets of actions on even numbered objects and odd numbered objects in each set of actions.", "plan_exists": true}
+{"problem": "p32", "constraint": "constraint16", "constraint_description": "You must start by performing a set of actions on an odd numbered object, then alternate between performing sets of actions on even numbered objects and odd numbered objects.", "plan_exists": true}
+{"problem": "p33", "constraint": "constraint17", "constraint_description": "For every second set of actions, you must perform a set of actions on an object with a number that is a multiple of 3.", "plan_exists": true}
+{"problem": "p34", "constraint": "constraint18", "constraint_description": "For every second set of actions, you must perform a set of actions on an object with a number that is a multiple of 4.", "plan_exists": true}
+{"problem": "p35", "constraint": "constraint19", "constraint_description": "For every second set of actions, you must perform a set of actions on an object with a number that is a multiple of 5.", "plan_exists": true}
+{"problem": "p36", "constraint": "constraint20", "constraint_description": "You must start by performing a set of actions on an even numbered object, then alternate between performing sets of actions on odd numbered objects and even numbered objects.", "plan_exists": false}
+{"problem": "p37", "constraint": "constraint21", "constraint_description": "If you perform a set of objects on object2, you must perform a set of actions on object4 immediately after. If you perform a set of actions on object4 you must perform a set of actions on object6 immediately after.", "plan_exists": true}
+{"problem": "p38", "constraint": "constraint22", "constraint_description": "If you perform a set of objects on object1, you must perform a set of actions on object2 immediately after. If you perform a set of actions on object2 you must perform a set of actions on object3 immediately after.", "plan_exists": true}
+{"problem": "p39", "constraint": "constraint23", "constraint_description": "If you perform a set of actions on object1, you must perform a set of actions on object2 or object3 immediately after.", "plan_exists": true}
+{"problem": "p40", "constraint": "constraint24", "constraint_description": "If you perform a set of actions on an object with a number that is a multiple of 3, you must perform a set of actions with an object with a number that is a multiple of 5 immediately after.", "plan_exists": true}
+{"problem": "p41", "constraint": "constraint25", "constraint_description": "Once you perform action3 an object, you cannot perform action4 on the same object.", "plan_exists": true}
+{"problem": "p42", "constraint": "constraint26", "constraint_description": "Once you perform action1 on an action, you cannot perform action2 on the same object.", "plan_exists": true}
+{"problem": "p43", "constraint": "constraint27", "constraint_description": "Once you perform action2 on an object, you cannot perform action1 on the same object.", "plan_exists": true}
+{"problem": "p44", "constraint": "constraint28", "constraint_description": "Once you perform action4 on an object, you cannot perform action2 on the same object.", "plan_exists": false}
+{"problem": "p45", "constraint": "constraint29", "constraint_description": "You cannot action3 any object with object1.", "plan_exists": true}
+{"problem": "p46", "constraint": "constraint30", "constraint_description": "You cannot action3 any object with object2.", "plan_exists": true}
+{"problem": "p47", "constraint": "constraint31", "constraint_description": "You cannot action3 any object with object3.", "plan_exists": false}
+{"problem": "p48", "constraint": "constraint32", "constraint_description": "You cannot action3 any object with object4.", "plan_exists": false}
+{"problem": "p49", "constraint": "constraint33", "constraint_description": "You cannot action3 any object with object5.", "plan_exists": false}
+{"problem": "p50", "constraint": "constraint34", "constraint_description": "Do not perform action3 with object1 and object2.", "plan_exists": true}
+{"problem": "p51", "constraint": "constraint35", "constraint_description": "Do not perform action3 with object1 and object3.", "plan_exists": true}
+{"problem": "p52", "constraint": "constraint36", "constraint_description": "Do not perform action3 with object1 and object4.", "plan_exists": true}
+{"problem": "p53", "constraint": "constraint37", "constraint_description": "Do not perform action3 with object1 and object5.", "plan_exists": true}
+{"problem": "p54", "constraint": "constraint38", "constraint_description": "Do not perform action3 with object1 and object6.", "plan_exists": true}
+{"problem": "p55", "constraint": "constraint39", "constraint_description": "Do not perform action3 with object1 and object2. Do not perform action3 with object2 and object3", "plan_exists": true}
+{"problem": "p56", "constraint": "constraint40", "constraint_description": "Do not perform action3 with an even numbered object and an odd numbered object", "plan_exists": true}
+{"problem": "p57", "constraint": "constraint41", "constraint_description": "Do not perform action3 with an odd numerbered object and an even numerbered object", "plan_exists": false}

@@ -1,0 +1,16 @@
+{"problem": "p01", "constraint": "constraint1", "constraint_description": "The higher number the object, the heavier it is. Once, you start performing actions on the objects, do not action3 heavier objects with lighter objects", "plan_exists": true}
+{"problem": "p02", "constraint": "constraint2", "constraint_description": "The higher number the object, the heavier it is. Once you start performing actions on the objects, do not action3 lighter objects with heavier objects", "plan_exists": false}
+{"problem": "p03", "constraint": "constraint3", "constraint_description": "Once you start performing , no cluster may surpass a height of 2 objects.", "plan_exists": false}
+{"problem": "p04", "constraint": "constraint4", "constraint_description": "Once you start performing, no cluster may surpass a height of 3 objects.", "plan_exists": true}
+{"problem": "p05", "constraint": "constraint5", "constraint_description": "Once you start performing , no cluster may surpass a height of 4 objects.", "plan_exists": false}
+{"problem": "p06", "constraint": "constraint6", "constraint_description": "Once you start performing actions on the objects, no cluster may surpass a height of 5 objects.", "plan_exists": true}
+{"problem": "p07", "constraint": "constraint7", "constraint_description": "Once you start performing actions on the objects, you must have exactly 10 clusters at any time", "plan_exists": false}
+{"problem": "p09", "constraint": "constraint8", "constraint_description": "The weight of each object is its number. Once you start performing actions on the objects, the total weight above an object should not exceed the weight of the object itself.", "plan_exists": false}
+{"problem": "p11", "constraint": "constraint9", "constraint_description": "Once you start performing actions on the objects, you must have exactly 6 clusters at any time.", "plan_exists": false}
+{"problem": "p12", "constraint": "constraint10", "constraint_description": "Once you start performing actions on the objects, you must have no more than 1 cluster at any time.", "plan_exists": false}
+{"problem": "p13", "constraint": "constraint11", "constraint_description": "Once you start performing actions on the objects, you must have no more than 2 clusters at any time.", "plan_exists": false}
+{"problem": "p14", "constraint": "constraint12", "constraint_description": "Once you start performing actions on the objects, you must have no more than 3 clusters at any time.", "plan_exists": false}
+{"problem": "p17", "constraint": "constraint13", "constraint_description": "Once you performing actions on the blocks, you must have exactly 3 clusters at any time.", "plan_exists": false}
+{"problem": "p18", "constraint": "constraint14", "constraint_description": "Once you start performing actions on the objects, you must have exactly 4 clusters at any time.", "plan_exists": false}
+{"problem": "p19", "constraint": "constraint15", "constraint_description": "Once you start performing actions on the objects, you must have exactly 5 clusters at any time.", "plan_exists": false}
+{"problem": "p20", "constraint": "constraint16", "constraint_description": "Once you start performing actions on the objects, the sum of the object numbers in each cluster should not exceed 5.", "plan_exists": false}

@@ -1,0 +1,8 @@
+You are in the kitchen.
+To the south of the kitchen is the pantry.
+To the west of the kitchen is the corridor.
+To the north of the corridor is the bathroom.
+To the south of the corridor is the bedroom.
+To the north of the bathroom is the living room.
+To the north of the living room is the backyard.
+There is a coin in the bedroom.

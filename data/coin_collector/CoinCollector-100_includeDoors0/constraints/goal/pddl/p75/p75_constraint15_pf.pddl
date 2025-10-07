@@ -1,0 +1,44 @@
+(define (problem coin_collector_numLocations9_numDistractorItems0_seed35)
+;; CONSTRAINT You must take the decoy coin to end the task.
+  (:domain coin-collector)
+  (:objects
+    kitchen living_room pantry bathroom backyard bedroom corridor laundry_room driveway - room
+    north south east west - direction
+;; BEGIN EDIT
+    coin decoy_coin - item
+;; END EDIT
+  )
+  (:init
+    (at kitchen)
+    (connected kitchen living_room north)
+    (connected kitchen pantry east)
+    (connected kitchen bathroom west)
+    (connected living_room kitchen south)
+    (connected living_room backyard north)
+    (connected living_room bedroom west)
+    (connected pantry kitchen west)
+    (connected bathroom kitchen east)
+    (connected bathroom bedroom north)
+    (connected backyard living_room south)
+    (connected backyard corridor west)
+    (connected bedroom living_room east)
+    (connected bedroom bathroom south)
+    (connected bedroom corridor north)
+    (connected corridor backyard east)
+    (connected corridor bedroom south)
+    (connected corridor laundry_room north)
+    (connected corridor driveway west)
+    (connected laundry_room corridor south)
+    (connected driveway corridor east)
+    (location coin bathroom)
+    (is-reverse north south)
+    (is-reverse south north)
+    (is-reverse east west)
+    (is-reverse west east)
+  )
+  (:goal 
+;; BEGIN EDIT
+    (taken decoy_coin)
+;; END EDIT
+  )
+)

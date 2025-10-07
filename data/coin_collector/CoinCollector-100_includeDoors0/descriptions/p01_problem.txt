@@ -1,0 +1,4 @@
+You are in the kitchen.
+To the north of the kitchen is the pantry.
+To the south of the kitchen is the corridor.
+There is a coin in the corridor.

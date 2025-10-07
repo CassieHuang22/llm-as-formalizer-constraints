@@ -1,0 +1,1 @@
+You must take exactly 6 move actions before taking any coin.

@@ -1,0 +1,45 @@
+(define (problem coin_collector_numLocations11_numDistractorItems0_seed84)
+;; CONSTRAINT After taking the coin, you must be in the driveway to end the task.
+  (:domain coin-collector)
+  (:objects
+    kitchen pantry bathroom corridor laundry_room bedroom backyard living_room driveway street supermarket - room
+    north south east west - direction
+    coin - item
+  )
+  (:init
+    (at kitchen)
+    (connected kitchen pantry north)
+    (connected kitchen bathroom south)
+    (connected kitchen corridor east)
+    (connected pantry kitchen south)
+    (connected bathroom kitchen north)
+    (connected bathroom laundry_room west)
+    (connected corridor kitchen west)
+    (connected corridor bedroom north)
+    (connected corridor backyard south)
+    (connected laundry_room bathroom east)
+    (connected bedroom corridor south)
+    (connected bedroom living_room north)
+    (connected backyard corridor north)
+    (connected backyard driveway south)
+    (connected backyard street east)
+    (connected living_room bedroom south)
+    (connected driveway backyard north)
+    (connected street backyard west)
+    (connected street supermarket north)
+    (connected supermarket street south)
+    (location coin bedroom)
+    (is-reverse north south)
+    (is-reverse south north)
+    (is-reverse east west)
+    (is-reverse west east)
+  )
+  (:goal 
+;; BEGIN EDIT
+    (and
+      (taken coin)
+      (at driveway)
+    )
+;; END EDIT
+  )
+)

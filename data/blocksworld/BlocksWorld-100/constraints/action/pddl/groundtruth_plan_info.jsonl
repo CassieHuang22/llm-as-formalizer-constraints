@@ -1,0 +1,41 @@
+{"problem": "p08", "constraint": "constraint1", "constraint_description": "Only 15 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p10", "constraint": "constraint2", "constraint_description": "Only 20 pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p15", "constraint": "constraint3", "constraint_description": "Only 5 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p16", "constraint": "constraint4", "constraint_description": "Only 10 block pick ups are allowed in the entire task.", "plan_exists": true}
+{"problem": "p21", "constraint": "constraint5", "constraint_description": "If you move block1, you must move block2 after.", "plan_exists": true}
+{"problem": "p22", "constraint": "constraint6", "constraint_description": "If you move block1, you must move block3 after.", "plan_exists": true}
+{"problem": "p23", "constraint": "constraint7", "constraint_description": "If you move block1, you must move block4 after.", "plan_exists": true}
+{"problem": "p24", "constraint": "constraint8", "constraint_description": "If you move block1, you must move block5 after.", "plan_exists": false}
+{"problem": "p25", "constraint": "constraint9", "constraint_description": "If you move block1, you must move block6 after.", "plan_exists": true}
+{"problem": "p26", "constraint": "constraint10", "constraint_description": "If you move block1, you must move block2 within the next 2 moves.", "plan_exists": true}
+{"problem": "p27", "constraint": "constraint11", "constraint_description": "If you move block1, you must move block2 within the next 3 moves.", "plan_exists": true}
+{"problem": "p28", "constraint": "constraint12", "constraint_description": "If you move block1, you must move block2 within the next 4 moves.", "plan_exists": true}
+{"problem": "p29", "constraint": "constraint13", "constraint_description": "If you move block1, you must move block2 within the next 5 moves.", "plan_exists": true}
+{"problem": "p30", "constraint": "constraint14", "constraint_description": "If you move block1, you must move block2 within the next 6 moves.", "plan_exists": true}
+{"problem": "p31", "constraint": "constraint15", "constraint_description": "You must alternate between moving even numbered blocks and odd numbered blocks in each move.", "plan_exists": true}
+{"problem": "p32", "constraint": "constraint16", "constraint_description": "You must start by moving an odd numbered block, then alternate between moving even numbered blocks and odd numbered blocks.", "plan_exists": true}
+{"problem": "p33", "constraint": "constraint17", "constraint_description": "For every second move, you must move a block with a number that is a multiple of 3.", "plan_exists": true}
+{"problem": "p34", "constraint": "constraint18", "constraint_description": "For every second move, you must move a block with a number that is a multiple of 4.", "plan_exists": true}
+{"problem": "p35", "constraint": "constraint19", "constraint_description": "For every second move, you must move a block with a number that is a multiple of 5.", "plan_exists": true}
+{"problem": "p36", "constraint": "constraint20", "constraint_description": "You must start by moving an even numbered block, then alternate between moving odd numbered blocks and even numbered blocks.", "plan_exists": false}
+{"problem": "p37", "constraint": "constraint21", "constraint_description": "If you move block2, you must move block4 immediately after. If you move block4 you must move block6 immediately after.", "plan_exists": true}
+{"problem": "p38", "constraint": "constraint22", "constraint_description": "If you move block1, you must move block2 immediately after. If you move block2 you must move block3 immediately after.", "plan_exists": true}
+{"problem": "p39", "constraint": "constraint23", "constraint_description": "If you move block1, you must move block2 or block3 immediately after.", "plan_exists": true}
+{"problem": "p40", "constraint": "constraint24", "constraint_description": "If you move a block with a number that is a multiple of 3, you must move a block with a number that is a multiple of 5 immediately after.", "plan_exists": true}
+{"problem": "p41", "constraint": "constraint25", "constraint_description": "Once you stack a block, you cannot unstack it.", "plan_exists": true}
+{"problem": "p42", "constraint": "constraint26", "constraint_description": "Once you pick up a block, you cannot put it down.", "plan_exists": true}
+{"problem": "p43", "constraint": "constraint27", "constraint_description": "Once you put down a block on the table, you cannot pick it back up.", "plan_exists": true}
+{"problem": "p44", "constraint": "constraint28", "constraint_description": "Once you unstack a block, you cannot put it down on the table.", "plan_exists": false}
+{"problem": "p45", "constraint": "constraint29", "constraint_description": "Block 1 is fragile and no other block can be placed on top of it.", "plan_exists": true}
+{"problem": "p46", "constraint": "constraint30", "constraint_description": "Block 2 is fragile and no other block can be placed on top of it.", "plan_exists": true}
+{"problem": "p47", "constraint": "constraint31", "constraint_description": "Block 3 is fragile and no other block can be placed on top of it.", "plan_exists": false}
+{"problem": "p48", "constraint": "constraint32", "constraint_description": "Block 4 is fragile and no other block can be placed on top of it.", "plan_exists": false}
+{"problem": "p49", "constraint": "constraint33", "constraint_description": "Block 5 is fragile and no other block can be placed on top of it.", "plan_exists": false}
+{"problem": "p50", "constraint": "constraint34", "constraint_description": "Do not stack block1 on block2.", "plan_exists": true}
+{"problem": "p51", "constraint": "constraint35", "constraint_description": "Do not stack block1 on block3.", "plan_exists": true}
+{"problem": "p52", "constraint": "constraint36", "constraint_description": "Do not stack block1 on block4.", "plan_exists": true}
+{"problem": "p53", "constraint": "constraint37", "constraint_description": "Do not stack block1 on block5.", "plan_exists": true}
+{"problem": "p54", "constraint": "constraint38", "constraint_description": "Do not stack block1 on block6.", "plan_exists": true}
+{"problem": "p55", "constraint": "constraint39", "constraint_description": "Block 1 cannot be stack on block2 and block2 cannot be stack on block3.", "plan_exists": true}
+{"problem": "p56", "constraint": "constraint40", "constraint_description": "Even numbered blocks cannot be stacked on odd numbered blocks.", "plan_exists": true}
+{"problem": "p57", "constraint": "constraint41", "constraint_description": "Odd numbered blocks cannot be stacked on even numbered blocks.", "plan_exists": false}

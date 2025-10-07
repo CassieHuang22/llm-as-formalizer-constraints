@@ -1,0 +1,1 @@
+Each room has their own ID number (kitchen=1, pantry=2, corridor=3, backyard=4, bedroom=5, living room = 6, bathroom=7, laundry room=8, driveway=9, street=10, supermarket=11) the sum of all IDs for the rooms you visit, including the starting room, cannot exceed 10.

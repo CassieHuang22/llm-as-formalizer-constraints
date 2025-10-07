@@ -1,0 +1,8 @@
+{"problem": "p03", "constraint": "constraint1", "constraint_description": "Each room has their own ID number (kitchen=1, pantry=2, corridor=3, backyard=4, bedroom=5, living room = 6, bathroom=7, laundry room=8, driveway=9, street=10, supermarket=11) the sum of all IDs for the rooms you visit, including the starting room, cannot exceed 3.", "plan_exists": false}
+{"problem": "p04", "constraint": "constraint2", "constraint_description": "You cannot be more than two rooms away from the kitchen.", "plan_exists": true}
+{"problem": "p07", "constraint": "constraint3", "constraint_description": "Each room has their own ID number (kitchen=1, pantry=2, corridor=3, backyard=4, bedroom=5, living room = 6, bathroom=7, laundry room=8, driveway=9, street=10, supermarket=11) the sum of all IDs for the rooms you visit, including the starting room, cannot exceed 10.", "plan_exists": false}
+{"problem": "p08", "constraint": "constraint4", "constraint_description": "You cannot be more than three rooms away from the kitchen.", "plan_exists": true}
+{"problem": "p12", "constraint": "constraint5", "constraint_description": "You cannot be more than four rooms away from the kitchen.", "plan_exists": true}
+{"problem": "p16", "constraint": "constraint6", "constraint_description": "You cannot be more than five rooms away from the kitchen.", "plan_exists": true}
+{"problem": "p20", "constraint": "constraint7", "constraint_description": "You cannot be more than six rooms away from the kitchen.", "plan_exists": true}
+{"problem": "p58", "constraint": "constraint8", "constraint_description": "There is now a closed door between the kitchen and pantry. To open the door there is now the (open room1 room2 direction reverse-direction) action.", "plan_exists": true}

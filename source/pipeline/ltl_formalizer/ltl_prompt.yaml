@@ -1,0 +1,103 @@
+coin_collector_formulas: |
+  You are given a description of a grid world with rooms, adjacencies (north/south/east/west relations), 
+  and possibly items (e.g. a coin) located in some room. 
+
+  Your task is to convert this description into a set of LTL formulas for planning. 
+  Decompose the problem into 5 parts: 
+  1. Initial condition
+  2. Occupancy (exactly one room at a time)
+  3. Move dynamics (allowed moves)
+  4. Pickup dynamics (pickup conditions)
+  5. Goal (eventual condition)
+
+  ### Rules:
+  - Each room should be an atomic proposition in its name (e.g., `kitchen`, `bedroom`, etc.).
+  - Exactly one room must be true at any time.
+  - Legal moves: if you are in room A, the next state must be in one of the adjacent rooms or staying at the current room.
+  - Legal pickups: if there is a coin in a room R, define an atomic proposition `has_coin`, and add these two rules to pickup dynamics for `has_coin`:
+    - If the agent is in R and does not have the coin, then in the next state it may either gain the coin or stay without it.
+    - If the agent is not in R and does not have the coin, then in the next state it must still not have the coin.
+    - If the agent has the coin, it continues to have it in all future states.
+    - if the coin is in room R, then picking it up must only change `has_coin` but not coincide with moving.
+  - Initial condition: mark the starting room. `has_coin` is always false initially.
+  - Goal: eventually `has_coin` must be true.
+
+  ### Output format:
+  Produce 4 formulas in Python strings:
+  - `init = "..."` 
+  - `occupancy = "..."` 
+  - `move_dynamics = "..."` 
+  - `pickup_dynamics = "..."` 
+  - `goal = "..."` 
+
+  ---
+  [DESCRIPTION]
+  ---
+  Now generate the formulas:
+
+coin_collector_adjacency: |
+  You are given a description of a world with rooms and directional relations.
+
+  Your task is to output the adjacency dictionary in Python format.
+
+  ### Rules:
+  - Use room names exactly as given in the text, lowercased and underscores instead of spaces.
+  - Each key in the dictionary is a room.
+  - Each value is another dictionary: {neighbor: direction}.
+  - The direction must be from the perspective of the key room (north, south, east, west).
+  - Always include both directions if they are implied. 
+    Example: "To the north of the kitchen is the pantry" means:
+        adjacency["kitchen"]["pantry"] = "north"
+        adjacency["pantry"]["kitchen"] = "south"
+
+  ### Output format:
+  adjacency = {
+  "room1": {"neighbor1": "direction", "neighbor2": "direction", ...},
+  "room2": {...},
+  ...
+  }
+
+  ---
+  [DESCRIPTION]
+  ---
+  Now generate only the adjacency dictionary in the output format:
+
+coin_collector_constraints: |
+  You are given a set of atomic propositions and an environment description that represent a grid world planning problem.
+  - Each room name is an atomic proposition, e.g.,[ROOMS]
+  - The agent may pick up a coin, tracked by proposition "has_coin".
+  Environment description:
+  [PROBELM_DESCRIPTION]
+
+  Your task: Given an additional natural language constraint, output the corresponding LTL formula that enforces it.
+
+  ### Rules:
+  - Always output formulas in the form of Python strings, e.g., "G(...)" or "F(...)".
+  - Use the existing atomic propositions exactly as defined.
+  - If the constraint mentions a room, use the room's name directly.
+  - You should only output formulas for the new constraints.
+
+  ### Examples:
+  - If a constraint says "never enter ROOM", output `"G(!ROOM)"`.
+  - If a constraint says "only move south", expand it into formulas of the form:
+      For each room r, if its southern neighbor is s, then:
+        G( r -> X(s) )
+      and forbid all other neighbors in the X operator.
+  - If a constraint says "only move south or west", expand similarly, listing all allowed successors explicitly.
+  - If a constraint says "must visit ROOM_A before ROOM_B", encode it as `"(!ROOM_B) U ROOM_A"`.
+  - If a constraint says "visit ROOM_A right after pick up coin", be careful about the number of X operators:
+      If you are picking up the coin in the next timestep, visiting room a will happen in the following timestep: "G( (!has_coin & X(has_coin)) -> XX(ROOM_A) )"
+  - Always output Python string formulas, one per constraint.
+  - Do not introduce undefined macros.
+
+  ### Formatting Examples:
+  Natural language: "The agent must never enter the backyard."
+  Output: "G(!backyard)"
+
+  Natural language: "The agent must visit the bathroom before visiting the bedroom."
+  Output: "(!bedroom) U bathroom"
+
+  ---
+  Constraint Description:
+  [CONSTRAINTS_DESCRIPTION]
+  Now, given these natural language constraints, output only the corresponding LTL formulas, without explanations:
