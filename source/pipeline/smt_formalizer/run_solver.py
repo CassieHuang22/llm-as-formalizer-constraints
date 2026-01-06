@@ -10,13 +10,29 @@ import re
 parser = argparse.ArgumentParser()
 parser.add_argument("--domain", help="which domain to use")
 parser.add_argument("--data", help="which dataset to use")
-parser.add_argument("--constraint_type", choices=["baseline", "initial", "goal", "action", "state"])
+parser.add_argument("--constraint_type", choices=["baseline", "initial", "goal", "state-based", "sequential", "numerical"])
 parser.add_argument("--model", help="which model to evaluate")
 parser.add_argument("--run_type", help="type of output for the model", choices=["generate", "edit"])
 parser.add_argument("--revision", action='store_true')
-parser.add_argument("--problems", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
-parser.add_argument("--constraints", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+parser.add_argument("--default", action="store_true")
+parser.add_argument("--problems", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+parser.add_argument("--constraints", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
 args = parser.parse_args()
+
+def get_default(domain, data, constraint_type):
+    jsonl_file_path = f'../../../data/{domain}/{data}/constraints/{constraint_type}/pddl/groundtruth_plan_info.jsonl'
+    problems = []
+    constraints = []
+    with open(jsonl_file_path) as jsonl_file:
+        for line in jsonl_file:
+            groundtruth_plan_info = json.loads(line)
+            
+            problem_name = groundtruth_plan_info["problem"]
+            constraint_name = groundtruth_plan_info["constraint"]
+            problems.append(problem_name)
+            constraints.append(constraint_name)
+    
+    return problems, constraints
 
 def problem_and_constraint_names(problems, constraints):
     problem_numbers = []
@@ -130,8 +146,11 @@ def run_solver_batch(domain, model, data, run_type, constraint_type, revision, p
         with open(output_path, 'w') as output_file:
                 output_file.write(result)
 
-def main(domain, data, model, constraint_type, run_type, revision, problems, constraints):
-    problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
+def main(domain, data, model, constraint_type, run_type, revision, default, problems, constraints):
+    if default:
+        problem_names, constraint_names = get_default(domain, data, constraint_type)
+    else:
+        problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
     
     run_solver_batch(domain, model, data, run_type, constraint_type, revision, problem_names, constraint_names)
 
@@ -143,7 +162,8 @@ if __name__=="__main__":
     constraint_type = args.constraint_type
     run_type = args.run_type
     revision = args.revision
+    default = args.default
     problems = args.problems
     constraints = args.constraints
-    main(domain=domain, data=data, model=model, constraint_type=constraint_type, run_type=run_type, revision=revision, problems=problems, constraints=constraints)
+    main(domain=domain, data=data, model=model, constraint_type=constraint_type, run_type=run_type, revision=revision, default=default, problems=problems, constraints=constraints)
     

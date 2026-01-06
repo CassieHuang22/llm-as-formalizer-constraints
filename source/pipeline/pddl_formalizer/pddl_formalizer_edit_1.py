@@ -10,8 +10,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--domain", help="which domain to evaluate", choices=["blocksworld", "mystery_blocksworld", "coin_collector"])
 parser.add_argument("--data", help="which dataset to evaluate", choices=["BlocksWorld-100", "Mystery_BlocksWorld-100", "BlocksWorld-100-XL", "CoinCollector-100_includeDoors0"])
 parser.add_argument("--model", help="which model to use", choices=["deepseek-reasoner", "deepseek-chat", "Qwen3-32B", "Qwen2.5-Coder-32B-Instruct"])
-parser.add_argument("--problems", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
-
+parser.add_argument("--problems", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+parser.add_argument("--default", action="store_true")
 def get_problem_names(problems):
     problem_numbers = []
     for part in problems.split(","):
@@ -123,7 +123,9 @@ async def run_qwen_batch(engine, domain, data, model, problems):
         else:
             print(f"cannot generate {problem}")
 
-def main(domain, data, model, problems):
+def main(domain, data, model, default, problems):
+    if default:
+        problems = "1-100"
     problem_names = get_problem_names(problems)
     if "deepseek" in model:
         openai_api_key = open(f'../../../../../_private/key_deepseek.txt').read()
@@ -138,6 +140,7 @@ if __name__=="__main__":
     domain = args.domain
     data = args.data
     model = args.model
+    default = args.default
     problems = args.problems
-    main(domain=domain, data=data, model=model, problems=problems)
+    main(domain=domain, data=data, model=model, default=default, problems=problems)
     

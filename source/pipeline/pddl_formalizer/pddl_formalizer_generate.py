@@ -11,9 +11,25 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--domain", help="which domain to evaluate", choices=["blocksworld", "mystery_blocksworld", "coin_collector"])
 parser.add_argument("--data", help="which dataset to evaluate", choices=["BlocksWorld-100", "Mystery_BlocksWorld-100", "BlocksWorld-100-XL", "CoinCollector-100_includeDoors0"])
 parser.add_argument("--model", help="which model to use", choices=["deepseek-reasoner", "deepseek-chat", "Qwen3-32B", "Qwen2.5-Coder-32B-Instruct"])
-parser.add_argument("--constraint_type", help="which constraint to evaluate", choices=["baseline", "initial", "goal", "action", "state"])
-parser.add_argument("--problems", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
-parser.add_argument("--constraints", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+parser.add_argument("--constraint_type", help="which constraint to evaluate", choices=["initial", "goal", "state-based", "sequential", "numerical", "baseline"])
+parser.add_argument("--default", action="store_true")
+parser.add_argument("--problems", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+parser.add_argument("--constraints", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)")
+
+def get_default(domain, data, constraint_type):
+    jsonl_file_path = f'../../../data/{domain}/{data}/constraints/{constraint_type}/pddl/groundtruth_plan_info.jsonl'
+    problems = []
+    constraints = []
+    with open(jsonl_file_path) as jsonl_file:
+        for line in jsonl_file:
+            groundtruth_plan_info = json.loads(line)
+            
+            problem_name = groundtruth_plan_info["problem"]
+            constraint_name = groundtruth_plan_info["constraint"]
+            problems.append(problem_name)
+            constraints.append(constraint_name)
+    
+    return problems, constraints
 
 def problem_and_constraint_names(problems, constraints):
     problem_numbers = []
@@ -139,8 +155,11 @@ async def run_qwen_batch(engine, domain, data, model, constraint_type, problems,
         else:
             print(f"cannot generate {problem}_{constraint}")
 
-def main(domain, data, model, constraint_type, problems, constraints):
-    problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
+def main(domain, data, model, constraint_type, default, problems, constraints):
+    if default:
+        problem_names, constraint_names = get_default(domain, data, constraint_type)
+    else:
+        problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
     if "deepseek" in model:
         openai_api_key = open(f'../../../../../_private/key_deepseek.txt').read()
         client = OpenAI(api_key=openai_api_key, base_url="https://api.deepseek.com")
@@ -155,7 +174,8 @@ if __name__=="__main__":
     data = args.data
     model = args.model
     constraint_type = args.constraint_type
+    default = args.default
     problems = args.problems
     constraints = args.constraints
-    main(domain=domain, data=data, model=model, constraint_type=constraint_type, problems=problems, constraints=constraints)
+    main(domain=domain, data=data, model=model, constraint_type=constraint_type, default=default, problems=problems, constraints=constraints)
     

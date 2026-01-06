@@ -11,6 +11,21 @@ from utils import load_from_file, raw_prompt_qwen
 from ltl_to_plan import ltl_to_plan
 import asyncio
 
+def get_default(domain, data, constraint_type):
+    jsonl_file_path = f'../../../data/{domain}/{data}/constraints/{constraint_type}/pddl/groundtruth_plan_info.jsonl'
+    problems = []
+    constraints = []
+    with open(jsonl_file_path) as jsonl_file:
+        for line in jsonl_file:
+            groundtruth_plan_info = json.loads(line)
+            
+            problem_name = groundtruth_plan_info["problem"]
+            constraint_name = groundtruth_plan_info["constraint"]
+            problems.append(problem_name)
+            constraints.append(constraint_name)
+    
+    return problems, constraints
+
 def problem_and_constraint_names(problems, constraints):
     problem_numbers = []
     for part in problems.split(","):
@@ -32,7 +47,7 @@ def problem_and_constraint_names(problems, constraints):
 
     return problem_names, constraint_names
 
-async def constrained_planning(engine, domain: str, problem_description: str, constraint_description: str) -> list[str]:
+async def constrained_planning(engine, domain, data, model, constraint_type, problem, constraint, attempt, problem_description, constraint_description):
     """
     LTL-based planing from a problem description and constraint description.
     Returns:
@@ -51,6 +66,14 @@ async def constrained_planning(engine, domain: str, problem_description: str, co
     phi = phi.replace("\\\n", " ")
     phi = phi.replace("\n", " ")
     phi = re.sub(r"\s+", " ", phi).strip()
+
+    formula_file_path = f'../../../output/llm-as-ltl-formalizer/{domain}/{data}/generate/{model}/{constraint_type}/{problem}/{problem}_{constraint}_{model}_formula_attempt{attempt}.txt'
+
+    if not os.path.exists(os.path.dirname(formula_file_path)):
+        os.makedirs(os.path.dirname(formula_file_path))
+
+    with open(formula_file_path, 'w') as formula_file:
+        formula_file.write(phi)
 
     actions = ltl_to_plan(phi, adjacency, debug=False)
     return actions
@@ -103,10 +126,10 @@ async def run_qwen_ltl(engine, domain, data, model, constraint_type, problem, co
     problem_description = open(f'../../../data/{domain}/{data}/descriptions/{problem}_problem.txt').read().strip()
     constraint_description = open(f'../../../data/{domain}/{data}/constraints/{constraint_type}/descriptions/{constraint}.txt').read().strip()
 
-    num_attempts = 1 if model == "Qwen3-32B" else 5
+    num_attempts = 5
     for attempt in range(num_attempts):
         try:
-            actions = await constrained_planning(engine, domain, problem_description, constraint_description)
+            actions = await constrained_planning(engine, domain, data, model, constraint_type, problem, constraint, attempt, problem_description, constraint_description)
             plan_file_path = f'../../../output/llm-as-ltl-formalizer/{domain}/{data}/generate/{model}/{constraint_type}/{problem}/{problem}_{constraint}_{model}_plan.txt'
 
             if not os.path.exists(os.path.dirname(plan_file_path)):
@@ -116,7 +139,11 @@ async def run_qwen_ltl(engine, domain, data, model, constraint_type, problem, co
                 for act in actions:
                     plan_file.write(f'{act}\n')
         except Exception as e:
-            print(e)
+            error_file_path = f'../../../output/llm-as-ltl-formalizer/{domain}/{data}/generate/{model}/{constraint_type}/{problem}/{problem}_{constraint}_{model}_error_attempt{attempt}.txt'
+            if not os.path.exists(os.path.dirname(error_file_path)):
+                os.makedirs(os.path.dirname(error_file_path))
+            with open(error_file_path, 'w') as error_file:
+                error_file.write(str(e))
             if attempt < num_attempts - 1:
                 continue
             else:
@@ -137,10 +164,14 @@ async def run_qwen_batch(engine, domain, data, model, constraint_type, problems,
         try:
             actions = await run_qwen_ltl(engine, domain, data, model, constraint_type, problem, constraint)
         except:
+            raise
             print(f'cannot run {problem}_{constraint}')
 
-def main(domain, data, model, constraint_type, problems, constraints):
-    problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
+def main(domain, data, model, constraint_type, default, problems, constraints):
+    if default:
+        problem_names, constraint_names = get_default(domain, data, constraint_type)
+    else:
+        problem_names, constraint_names = problem_and_constraint_names(problems, constraints)
     engine = HuggingEngine(model_id = f"Qwen/{model}", model_load_kwargs={"device_map": "auto"})
     asyncio.run(run_qwen_batch(engine, domain, data, model, constraint_type, problem_names, constraint_names))
 
@@ -149,9 +180,10 @@ if __name__ == "__main__":
     argparser.add_argument("--domain", type=str, default="coin_collector")
     argparser.add_argument("--data", default="CoinCollector-100_includeDoors0")
     argparser.add_argument("--model", help="which model to use", choices=["Qwen3-32B", "Qwen2.5-Coder-32B-Instruct"])
-    argparser.add_argument("--constraint_type", help="which constraint to evaluate", choices=["goal", "action", "state", "baseline"])
-    argparser.add_argument("--problems", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)", default="21-40")
-    argparser.add_argument("--constraints", type=str, required=True, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)", default="14-33")
+    argparser.add_argument("--constraint_type", help="which constraint to evaluate", default="action")
+    argparser.add_argument("--default", action="store_true")
+    argparser.add_argument("--problems", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)", default="21-40")
+    argparser.add_argument("--constraints", type=str, help="Single number, comma-separated list, or range (e.g., 1,3,5 or 1-10)", default="14-33")
 
     args = argparser.parse_args()
 
@@ -159,9 +191,10 @@ if __name__ == "__main__":
     data = args.data
     model = args.model
     constraint_type = args.constraint_type
+    default = args.default
     problems = args.problems
     constraints = args.constraints
 
-    main(domain=domain, data=data, model=model, constraint_type=constraint_type, problems=problems, constraints=constraints)
+    main(domain=domain, data=data, model=model, constraint_type=constraint_type, default=default, problems=problems, constraints=constraints)
 
     
