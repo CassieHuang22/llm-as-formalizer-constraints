@@ -4,8 +4,8 @@
   (:objects a b c )
   (:init 
     (on-table b)
-    (clear b)
 ;; BEGIN EDIT
+    (clear b)
     (holding a)
 ;; END EDIT
     (on-table c)

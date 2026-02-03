@@ -19,7 +19,7 @@
     (on-table block4)
 ;; BEGIN EDIT
     (holding block6)
-;; END
+;; END EDIT
     (on-table block3)
   ))
 )

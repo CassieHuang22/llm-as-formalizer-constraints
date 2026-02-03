@@ -33,6 +33,11 @@
     (is-reverse west east)
   )
   (:goal 
-    (taken coin)
+;; BEGIN EDIT
+    (and
+      (taken coin)
+      (at laundry_room)
+    )
+;; END EDIT
   )
 )
